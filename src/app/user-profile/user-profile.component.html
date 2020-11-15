@@ -1,0 +1,31 @@
+<div *ngIf="auth.user$ | async as user; else login">
+
+    <div id="welcome">
+        Welcome Back
+    
+        <div id="user"> 
+            {{ user.displayName }}
+        </div>
+    </div>
+    <button mat-raised-button color="primary" class="signButtons" (click)="auth.signOut()"> Signout</button>
+    <hr>
+
+    <br>
+    <app-user-rating [uid]="user.uid"></app-user-rating>
+
+    
+
+    
+</div>
+
+<ng-template #login>
+    <div id="login">
+    <button mat-raised-button color="primary" class="signButtons" (click)="auth.googleSignin()">
+        Login with Google
+    </button>
+    </div>
+</ng-template>
+
+
+
+

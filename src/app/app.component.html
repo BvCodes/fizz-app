@@ -1,0 +1,73 @@
+<!--
+<div id="wrapper">
+<h1>Fizzy Life</h1>
+<nav>
+  <ul>
+    <li>
+      <a routerLink="/dashboard">Home</a>
+    </li>
+    <li>
+      <a routerLink="/fizzList">Fizzy List</a>
+    </li>
+    <li>
+      <a routerLink="/userProfile">User Profile</a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
+
+</div>
+-->
+<div id="wrapper">
+<mat-toolbar color="accent" id="toolbar">
+  <button mat-icon-button id="burgerButton" (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  Seltzerly
+  <span id="spacer"></span>
+  <span class="links">
+    <a mat-list-item routerLink="/dashboard">home</a>
+  </span>
+  
+  <span class="links">
+    <a mat-list-item routerLink="/fizzList">seltzer list</a>
+  </span>
+  <span class="links">
+    <a routerLink="/about">about</a>
+  </span>
+  <span id="login">
+    <a routerLink="/userProfile">login</a>
+  </span>
+</mat-toolbar>
+
+<mat-sidenav-container id="mat-sidenav-container">
+  <mat-sidenav id="sideNav" mode="over" (opened)="events.push('open!')"
+                            (closed)="events.push('close!')">
+  <mat-nav-list>
+    <a mat-list-item routerLink="/dashboard">home</a>
+    <a mat-list-item routerLink="/fizzList">seltzer list</a>
+    <a mat-list-item routerLink="/about">about</a>
+    <a mat-list-item routerLink="/userProfile">user profile</a>
+    
+  </mat-nav-list>
+  </mat-sidenav>
+
+
+<mat-sidenav-content id="mat-sidenav-content">
+  <div id="routerOutlet">
+    <router-outlet></router-outlet>
+  </div>
+<footer>
+  <div id="footerDiv">
+    <p>Seltzerly™ - a BV.Codes Joint <br>
+      please send enquiries to: <a href="mailto:dev@seltzerly.com">dev@seltzerly></a>
+    </p>
+  </div>
+</footer>
+</mat-sidenav-content>
+</mat-sidenav-container>
+</div>
+
+
+
+

@@ -1,0 +1,81 @@
+/* You can add global styles to this file, and also import other style files */
+
+//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$lite-blue: #80D8FF;
+
+@media only screen and (max-width: 600px) {
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+.mat-tab-label {
+    
+    margin-top: 40px;
+    margin-right: 0;
+    font-size: 12px !important;
+    opacity: 1;
+    background-color: $lite-blue;
+    border-radius: 15px 50px;
+    border: 1px solid black;
+    
+}
+
+.mat-tab-labels {
+    justify-content: center !important;
+}
+
+}
+
+@media only screen and (min-width: 600px) {
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+.mat-tab-label {
+    
+    margin-top: 40px;
+    margin-right: 5px;
+    font-size: 15px !important;
+    opacity: 1;
+    background-color: $lite-blue;
+    border-radius: 15px 50px;
+    border: 1px solid black;
+    
+}
+
+.mat-tab-labels {
+    justify-content: center !important;
+}
+
+}
+
+@media only screen and (min-width: 992px) {
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+.mat-tab-label {
+    margin-top: 40px;
+    margin-right: 10px;
+    font-size: 18px !important;
+    opacity: 1;
+    background-color: $lite-blue;
+    border-radius: 15px 50px;
+    border: 1px solid black;
+    
+}
+
+.mat-tab-labels {
+    justify-content: center !important;
+}
+
+}
+

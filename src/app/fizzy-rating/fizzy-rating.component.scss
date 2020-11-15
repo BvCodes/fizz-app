@@ -1,0 +1,66 @@
+$accent-color: #1DE9B6;
+$primary-color: #00B0FF;
+$lite-pink: #FF80AB;
+$lite-blue: #80D8FF;
+$lite-teal: #64FFDA;
+
+
+
+
+#outer { 
+    
+    background-color: #e1f5f3;
+    border-radius: 15px 50px;
+    border: 1px solid black;
+    
+    
+}
+
+
+#list {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    padding-top: 5px;
+}
+
+#rating-card {
+    width: 225px;
+    background-color: $lite-teal;
+    border-radius: 15px 50px;
+    border: 1px solid black;
+    
+
+}
+#upVoteButton {
+    display: flex;
+    justify-content: center;
+    background: none;
+    background-color: none;
+    border: none;
+    
+}
+
+#upVoteOuter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+}
+
+#photoURL {
+    height: 48px;
+    width: 48px;
+}
+
+p {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 15px 50px;
+    
+}
+
+#list {
+    height: 100%;
+}
+
+

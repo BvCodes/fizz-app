@@ -1,0 +1,109 @@
+$accent-color: #1DE9B6;
+$primary-color: #00B0FF;
+$lite-pink: #FF80AB;
+$lite-blue: #80D8FF;
+$lite-teal: #64FFDA;
+
+
+
+@media only screen and (max-width: 600px) {
+    #outer {
+        display: flex;
+        height: 100vh;
+        
+        justify-content: center;
+    }
+    
+    .text {
+        margin-top: 15px;
+        width: 95%;
+        height: 98%;
+        background-color: $lite-blue;
+        border: 1px solid black;
+        border-radius: 15px 50px;
+        box-shadow: 5px 5px $primary-color;
+        font-size: 20px;
+    }
+    
+    .text p {
+        margin: 5%;
+    }
+
+}
+
+
+
+
+@media only screen and (min-width: 600px) {
+    #outer {
+        display: flex;
+        height: 100vh;
+        
+        justify-content: center;
+    }
+    
+    .text {
+        margin: 7%;
+        width: 95%;
+        height: 95%;
+        background-color: $lite-blue;
+        border: 1px solid black;
+        border-radius: 15px 50px;
+        box-shadow: 5px 5px $primary-color;
+        font-size: 20px;
+    }
+    
+    .text p {
+        margin: 5%;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    #outer {
+        display: flex;
+        height: 100vh;
+        
+        justify-content: center;
+    }
+    
+    .text {
+        margin: 75px;
+        width: 85%;
+        height: 85%;
+        background-color: $lite-blue;
+        border: 1px solid black;
+        border-radius: 15px 50px;
+        box-shadow: 5px 5px $primary-color;
+        font-size: 20px;
+    }
+    
+    .text p {
+        margin: 25px;
+    }
+}
+
+
+
+@media only screen and (min-width: 992px) {
+#outer {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.text {
+    margin: 75px;
+    width: 75%;
+    height: 75%;
+    background-color: $lite-blue;
+    border: 1px solid black;
+    border-radius: 15px 50px;
+    box-shadow: 5px 5px $primary-color;
+    font-size: 20px;
+}
+
+.text p {
+    margin: 25px;
+}
+}

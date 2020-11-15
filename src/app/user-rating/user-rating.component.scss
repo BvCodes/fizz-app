@@ -1,0 +1,242 @@
+$accent-color: #1DE9B6;
+$primary-color: #00B0FF;
+$lite-pink: #FF80AB;
+$lite-blue: #80D8FF;
+$lite-teal: #64FFDA;
+$white-blue: #e1f5f3;
+
+
+
+
+@media only screen and (max-width: 600px) {
+    #header {
+        width: 300px;
+        height: 50px;
+        margin-bottom: 25px;
+        background-color: $lite-blue;
+        border-radius: 50px 15px;
+        box-shadow: 5px 5px $primary-color;
+        border: 1px solid black;
+        text-align: center;
+        line-height: 50px;
+        font-size: 18px;
+    
+    
+    }
+    
+    #outer {
+        height: 100vh;
+    
+    }
+    
+    #editRating {
+        display: block;
+    }
+    /*
+    #firstPanel {
+        width: 300px;
+    }
+    */
+
+
+    #first-expan {
+        background-color: $white-blue;
+        border-radius: 15px 50px;
+        border: 1px solid black;
+        
+    }
+    
+    #first-header {
+        background-color: $white-blue;
+        
+        
+    }
+    
+    #second-expan {
+        background-color: $lite-blue;
+        border-radius: 15px 50px;
+        border: 1px solid black;
+    }
+    
+    #second-header {
+        background-color: $lite-blue;
+    }
+    
+    #edit {
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 600px) {
+
+    #header {
+        width: 300px;
+        height: 50px;
+        margin-bottom: 25px;
+        background-color: $lite-blue;
+        border-radius: 50px 15px;
+        box-shadow: 5px 5px $primary-color;
+        border: 1px solid black;
+        text-align: center;
+        line-height: 50px;
+        font-size: 24px;
+    
+    
+    }
+    
+    #outer {
+        height: 100vh;
+    
+    }
+    
+    #editRating {
+        display: block;
+    }
+    
+    #firstPanel {
+        width: 300px;
+    }
+    
+    #first-expan {
+        background-color: $white-blue;
+        border-radius: 15px 50px;
+        border: 1px solid black;
+    }
+    
+    #first-header {
+        background-color: $white-blue;
+    }
+    
+    #second-expan {
+        background-color: $lite-blue;
+        border-radius: 15px 50px;
+        border: 1px solid black;
+    }
+    
+    #second-header {
+        background-color: $lite-blue;
+    }
+    
+    #edit {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    #header {
+        width: 300px;
+        height: 50px;
+        margin-bottom: 25px;
+        background-color: $lite-blue;
+        border-radius: 50px 15px;
+        box-shadow: 5px 5px $primary-color;
+        border: 1px solid black;
+        text-align: center;
+        line-height: 50px;
+        font-size: 24px;
+    
+    
+    }
+    
+    #outer {
+        height: 100vh;
+    
+    }
+    
+    #editRating {
+        display: block;
+    }
+    
+    #firstPanel {
+        width: 300px;
+    }
+    
+    #first-expan {
+        background-color: $white-blue;
+        border-radius: 15px 50px;
+        border: 1px solid black;
+    }
+    
+    #first-header {
+        background-color: $white-blue;
+    }
+    
+    #second-expan {
+        background-color: $lite-blue;
+        border-radius: 15px 50px;
+        border: 1px solid black;
+    }
+    
+    #second-header {
+        background-color: $lite-blue;
+    }
+    
+    #edit {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+#header {
+    width: 300px;
+    height: 50px;
+    margin-bottom: 25px;
+    background-color: $lite-blue;
+    border-radius: 50px 15px;
+    box-shadow: 5px 5px $primary-color;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+
+
+}
+
+#outer {
+    height: 100vh;
+
+}
+
+#editRating {
+    display: block;
+}
+
+#firstPanel {
+    width: 300px;
+}
+
+#first-expan {
+    background-color: $white-blue;
+    border-radius: 15px 50px;
+    border: 1px solid black;
+}
+
+#first-header {
+    background-color: $white-blue;
+}
+
+#second-expan {
+    background-color: $lite-blue;
+    border-radius: 15px 50px;
+    border: 1px solid black;
+}
+
+#second-header {
+    background-color: $lite-blue;
+}
+
+#edit {
+    display: flex;
+    justify-content: center;
+}
+
+
+}

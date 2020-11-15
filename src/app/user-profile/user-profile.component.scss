@@ -1,0 +1,46 @@
+$accent-color: #1DE9B6;
+$primary-color: #00B0FF;
+$lite-pink: #FF80AB;
+$lite-blue: #80D8FF;
+$lite-teal: #64FFDA;
+
+#welcome {
+    margin-top: 50px;
+    height: 100px;
+    width: 300px;
+    text-align: center;
+    line-height: 50px;
+    background-color: $primary-color;
+    border-radius: 15px 50px;
+    border: 1px solid black;
+    font-size: 30px;
+    
+
+}
+
+#user {
+    height: auto;
+    width: 266px;
+    
+    margin: 0 auto;
+    
+    position: relative;
+
+    text-align: center;
+    line-height: 50px;
+    background-color: $lite-blue;
+    border-radius: 15px 50px;
+    font-size: 30px;
+    border: 1px solid black;
+}
+.signButtons {
+    border-radius: 50px 15px;
+    border: 1px solid black;
+    margin-top: 50px;
+}
+
+#login {
+    height: 100vh;
+    
+}
+

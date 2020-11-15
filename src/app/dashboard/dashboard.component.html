@@ -1,0 +1,50 @@
+<!--
+
+<h2>Top 5 Fizz</h2>
+<ul>
+    <li class="top5" *ngFor="let fizz of topFizzies">
+        <a class="top5Link" routerLink="/detail/{{fizz.fizzyId}}">
+            <div class="module topFizz">
+                <h4>{{fizz.brand}} - {{fizz.flavor}} - {{fizz.rating}}</h4>
+            </div>
+        </a>
+    </li>
+</ul>
+
+-->
+<div id="topHalf">
+<div id="welcome">
+    <h1>FIZZY WATER FOR FIZZY PEOPLE</h1>
+    <div id="logo"></div>
+    <img src="../../assets/logo_seltzerlylogo-color300.png" alt="Seltzerly Logo" id="dashLogo" width="300" height="300">
+</div>
+    
+<h2>Top 6 User Rated Seltzers</h2>
+</div>
+<div id="topFiveContainer">
+<div id="outterTopFive">
+<div id="innerTopFive">
+<div class="topFive" *ngFor="let fizz of topFizzies">
+    <mat-card class="seltzerCard" >
+        
+        <mat-card-header>
+            <div mat-card-avatar class="cardAvatar"></div>
+            <mat-card-title>{{ fizz.brand }} <br> {{ fizz.flavor }}</mat-card-title>
+            <mat-card-subtitle>avg rating: {{ fizz.avgRating }} <img src="../../assets/icons-02_blue.png" id="bubbleIcon" height="20px" width="20px" alt="bubble icon"> </mat-card-subtitle>
+            
+        </mat-card-header>
+        <a routerLink="/detail/{{ fizz.fizzyId }}">
+        <img mat-card-image src="{{ fizz.photoUrl }}" 
+                            alt="{{ fizz.brand }} {{ fizz.flavor}}" 
+                            id="cardImage"
+                            width="150px"
+                            height="185px"
+                            title="click for details"                            >
+        </a>                 
+        <mat-card-content class="mat-card-content">
+        </mat-card-content>
+    </mat-card>
+</div>
+</div>
+</div>
+</div>

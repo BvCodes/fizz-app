@@ -1,0 +1,324 @@
+$accent-color: #1DE9B6;
+$primary-color: #00B0FF;
+$lite-pink: #FF80AB;
+$lite-blue: #80D8FF;
+$lite-teal: #64FFDA;
+$bg-lightBlue: #B3E5FC;
+
+
+@media only screen and (max-width: 600px) {
+
+#wrapper {
+    background-size: cover;   
+}
+
+#toolbar {
+    border: 1px solid black;
+}
+
+#burgerButton {
+    display: block;
+}
+
+
+#mat-sidenav-container {
+    
+    //background-image: url('../assets/logo_bg_2.png');
+    background-color: $bg-lightBlue;
+}
+
+#sideNav {
+    display: block;
+    background-color: $lite-blue;
+    border: 1px solid black;
+}
+
+#mat-sidenav-content {
+    overflow: visible;
+}
+
+#routerOutlet {
+    //margin-left: 2%;
+    //margin-right: 10px;
+    height: 100%;
+    padding-bottom: 100px;
+}
+
+footer {
+    clear: left;
+    margin-bottom: 23px;
+}
+
+p {
+
+    text-align: center;
+    margin: auto;
+    width: 55%;
+    border: 1px solid black;
+    border-radius: 15px 15px;
+    background-color: $lite-blue;
+    font-size: 18px;
+    box-shadow: 5px 5px $primary-color;
+    
+}
+
+.links {
+    display: none;
+    margin-right: 15px;
+}
+
+
+
+a:link {
+    color: #1A237E;
+}
+a:visited {
+    color: #004D40;
+}
+
+a:hover {
+    color: #AD1457;
+}
+
+#spacer {
+    flex: 1 1 auto;
+}
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    #wrapper {
+        background-size: cover;   
+    }
+    
+    #toolbar {
+        border: 1px solid black;
+    }
+    
+    #burgerButton {
+        display: block;
+    }
+    
+    
+    #mat-sidenav-container {
+        //background-image: url('../assets/logo_bg_2.png');
+        background-color: $bg-lightBlue;
+    }
+    
+    #sideNav {
+        display: block;
+        background-color: $lite-blue;
+        border: 1px solid black;
+    }
+    
+    #mat-sidenav-content {
+        overflow: visible;
+    }
+    
+    #routerOutlet {
+        //margin-left: 15px;
+        //margin-right: 15px;
+        height: 100%;
+        padding-bottom: 100px;
+    }
+    
+    footer {
+        clear: left;
+        margin-bottom: 23px;
+    }
+    
+    p {
+    
+        text-align: center;
+        margin: auto;
+        width: 45%;
+        border: 1px solid black;
+        border-radius: 50px 15px;
+        background-color: $lite-blue;
+        font-size: 18px;
+        box-shadow: 5px 5px $primary-color;
+        
+    }
+    
+    .links {
+        display: none;
+        margin-right: 15px;
+    }
+
+    a:link {
+        color: #1A237E;
+    }
+    a:visited {
+        color: #004D40;
+    }
+    
+    a:hover {
+        color: #AD1457;
+    }
+    
+    #spacer {
+        flex: 1 1 auto;
+    }    
+
+}
+
+@media only screen and (min-width: 768px){
+
+    #wrapper {
+        background-size: cover;   
+    }
+    
+    #toolbar {
+        border: 1px solid black;
+    }
+    
+    #burgerButton {
+        display: block;
+    }
+    
+    
+    #mat-sidenav-container {
+        //background-image: url('../assets/logo_bg_2.png');
+        background-color: $bg-lightBlue;
+    }
+    
+    #sideNav {
+        display: block;
+        background-color: $lite-blue;
+        border: 1px solid black;
+    }
+    
+    #mat-sidenav-content {
+        overflow: visible;
+    }
+    
+    #routerOutlet {
+        //margin-left: 50px;
+        //margin-right: 50px;
+        height: 100%;
+        padding-bottom: 100px;
+    }
+    
+    footer {
+        clear: left;
+        margin-bottom: 23px;
+    }
+    
+    p {
+    
+        text-align: center;
+        margin: auto;
+        width: 45%;
+        border: 1px solid black;
+        border-radius: 50px 15px;
+        background-color: $lite-blue;
+        font-size: 18px;
+        box-shadow: 5px 5px $primary-color;
+        
+    }
+    
+    .links {
+        display: none;
+        margin-right: 15px;
+    }
+
+    a:link {
+        color: #1A237E;
+    }
+    a:visited {
+        color: #004D40;
+    }
+    
+    a:hover {
+        color: #AD1457;
+    }
+    
+    #spacer {
+        flex: 1 1 auto;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 992px) {
+
+    #wrapper {
+        background-size: cover;   
+    }
+    
+    #toolbar {
+        border: 1px solid black;
+    }
+    
+    
+    #burgerButton {
+        display: block;
+    }
+    
+    #mat-sidenav-container {
+        //background-image: url('../assets/logo_bg_2.png');
+        background-color: $bg-lightBlue;
+    }
+    
+    #sideNav {
+        display: block;
+        background-color: $lite-blue;
+        border: 1px solid black;
+
+        
+    }
+    
+    #mat-sidenav-content {
+        overflow: visible;
+    }
+    
+    #routerOutlet {
+        //margin-left: 50px;
+        //margin-right: 50px;
+        height: 100%;
+        padding-bottom: 100px;
+    }
+    
+    footer {
+        clear: left;
+        margin-bottom: 23px;
+    }
+    
+    p {
+    
+        text-align: center;
+        margin: auto;
+        width: 30%;
+        border: 1px solid black;
+        border-radius: 50px 15px;
+        background-color: $lite-blue;
+        font-size: 18px;
+        box-shadow: 5px 5px $primary-color;
+        
+    }
+    
+    .links {
+        display: none;
+        margin-right: 15px;
+        font-size: 15px;
+
+    }
+    
+
+    a:link {
+        color: #1A237E;
+    }
+    a:visited {
+        color: #004D40;
+    }
+    
+    a:hover {
+        color: #AD1457;
+    }
+    
+    #spacer {
+        flex: 1 1 auto;
+    }
+}

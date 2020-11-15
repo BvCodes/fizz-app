@@ -1,0 +1,74 @@
+<div id="header">
+Your Seltzer Ratings:
+</div>
+<!--
+    <ul>
+        <li *ngFor="let bubbles of userBubbles">
+            {{ bubbles.brand }} {{ bubbles.flavor}} - {{ bubbles.value }} <br> {{ bubbles.description }}<br>
+            <button mat-raised-button color="primary" (click)="toggleEdit()">Edit</button>
+            <h3 id="editRating">
+                <app-edit-rating    
+                    [fizzyId]="bubbles.fizzyId" 
+                    [brand]="bubbles.brand" 
+                    [flavor]="bubbles.flavor"
+                    [displayName]="bubbles.displayName"
+                    [uid]="bubbles.uid"
+                    [value]="bubbles.value">
+                </app-edit-rating>
+                
+            </h3>
+        </li>
+    </ul>
+-->
+<div id="outer">
+<div id="userRating" *ngFor="let bubbles of userBubbles">
+    <mat-accordion>
+        <mat-expansion-panel id="first-expan">
+            
+            <mat-expansion-panel-header id="first-header">
+                
+                <mat-panel-title >
+                    
+                        {{ bubbles.brand | uppercase }} {{ bubbles.flavor | uppercase }} - your rating: {{ bubbles.value }}
+                         --- Click to see your comment
+                         
+                    
+                    
+                </mat-panel-title>
+                <mat-panel-description>
+                   
+                </mat-panel-description>
+               
+            </mat-expansion-panel-header>
+            <hr>
+            <p>{{ bubbles.description }}</p>
+            
+        </mat-expansion-panel>
+        
+        <mat-expansion-panel id="second-expan">
+        <mat-expansion-panel-header id="second-header">
+            <mat-panel-title>
+                Click to edit your {{ bubbles.brand | uppercase }} {{ bubbles.flavor | uppercase }} rating
+            </mat-panel-title>
+            <mat-panel-description>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div id="edit">
+            <app-edit-rating    
+            [fizzyId]="bubbles.fizzyId" 
+            [brand]="bubbles.brand" 
+            [flavor]="bubbles.flavor"
+            [displayName]="bubbles.displayName"
+            [uid]="bubbles.uid"
+            [value]="bubbles.value"
+            [photoURL]="bubbles.photoURL"
+            [numVotes]="bubbles.numVotes">
+        
+            
+            </app-edit-rating>
+        </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
+</div>
+

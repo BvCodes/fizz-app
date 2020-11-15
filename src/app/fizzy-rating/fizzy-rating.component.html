@@ -1,0 +1,48 @@
+<!--
+<div *ngFor="let rating of fizzyRating ">
+--> 
+
+<div id="outer">
+    <mat-list  *ngFor="let rating of fizzyRating">
+        <mat-list-item id="list">
+            <!--
+            -{{ rating.displayName }}- <br>
+            {{ rating.fizzyName }} - {{ rating.value }} <br> {{ rating.description }}
+        </mat-list-item>
+            -->
+            <mat-card id="rating-card">
+                <mat-card-header>
+                <div mat-card-avatar>
+                    <img src="{{ rating.photoURL }}" id="photoURL" alt="user profile image">
+                </div>
+                <mat-card-title>
+                    {{ rating.displayName }}
+                </mat-card-title>
+                <mat-card-subtitle>
+                    {{ rating.brand }} {{ rating.flavor}}
+                </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    {{ rating.value }}
+                    <hr>
+                    {{  rating. description }}
+                </mat-card-content>
+                    <div id="upVoteOuter">
+                    <div *ngIf="auth.user$ | async as user">
+                        <button id="upVoteButton" [disabled]="user == null" (click)="this.upVote(this.rating.uid, this.rating.fizzyId, true, this.rating.numVotes)">
+                            <img id="buttonImg" src="../../assets/upvote_blue_50px.png" alt="upvote" title="upvote">
+                        </button>
+                    </div>
+                        <p>upvotes: {{ rating.numVotes }}</p>   
+                    </div>
+            </mat-card>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+    </mat-list>
+</div>
+
+
+
+<!--
+</div>
+-->
