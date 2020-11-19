@@ -19,7 +19,7 @@ export class UserRatingComponent implements OnInit {
 
   @Input() uid; 
 
-  userBubbles; //Bubbles[];
+  userBubbles; 
 
   editRating = new FormControl();
 
@@ -41,21 +41,8 @@ export class UserRatingComponent implements OnInit {
     .subscribe()
   }
 
-  toggleEdit() {
-    if (document.getElementById("editRating").style.display = "none") {
-      document.getElementById("editRating").style.display = "block";
-    } else {
-      document.getElementById("editRating").style.display = "none";
-    }
-  }
+  
 
   
 
-  /*
-  getFizzies(): void {
-    this.fizzyService.getFizzies()
-     .subscribe(fizzies => this.fizzies = fizzies);
-    
-   }
-*/
 }

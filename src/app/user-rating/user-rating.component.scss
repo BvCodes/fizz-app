@@ -9,14 +9,21 @@ $white-blue: #e1f5f3;
 
 
 @media only screen and (max-width: 600px) {
+
+    #wrapper {
+        height: 500px;
+        
+    }
+
     #header {
         width: 300px;
         height: 50px;
         margin-bottom: 25px;
+        margin-left: 15px;
         background-color: $lite-blue;
         border-radius: 50px 15px;
         box-shadow: 5px 5px $primary-color;
-        border: 1px solid black;
+        
         text-align: center;
         line-height: 50px;
         font-size: 18px;
@@ -25,37 +32,35 @@ $white-blue: #e1f5f3;
     }
     
     #outer {
-        height: 100vh;
+        height: 450px;
+        overflow-y: auto;
     
     }
     
-    #editRating {
-        display: block;
+   
+
+    #userRating {
+        margin-bottom: 10px;
     }
-    /*
-    #firstPanel {
-        width: 300px;
-    }
-    */
 
 
     #first-expan {
-        background-color: $white-blue;
-        border-radius: 15px 50px;
-        border: 1px solid black;
+        background-color: white;
+        border-radius: 5px 5px;
+        
         
     }
     
     #first-header {
-        background-color: $white-blue;
+        background-color: white;
         
         
     }
     
     #second-expan {
         background-color: $lite-blue;
-        border-radius: 15px 50px;
-        border: 1px solid black;
+        border-radius: 5px 5px;
+        
     }
     
     #second-header {
@@ -71,16 +76,22 @@ $white-blue: #e1f5f3;
 }
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 601px) {
+
+    #wrapper {
+        height: 500px;
+        
+    }
 
     #header {
         width: 300px;
         height: 50px;
         margin-bottom: 25px;
+        margin-left: 15px;
         background-color: $lite-blue;
         border-radius: 50px 15px;
         box-shadow: 5px 5px $primary-color;
-        border: 1px solid black;
+        
         text-align: center;
         line-height: 50px;
         font-size: 24px;
@@ -89,12 +100,15 @@ $white-blue: #e1f5f3;
     }
     
     #outer {
-        height: 100vh;
+        height: 450px;
+        overflow-y: auto;
     
     }
     
-    #editRating {
-        display: block;
+   
+
+    #userRating {
+        margin-bottom: 10px;
     }
     
     #firstPanel {
@@ -102,19 +116,19 @@ $white-blue: #e1f5f3;
     }
     
     #first-expan {
-        background-color: $white-blue;
-        border-radius: 15px 50px;
-        border: 1px solid black;
+        background-color: white;
+        border-radius: 5px 5px;
+        
     }
     
     #first-header {
-        background-color: $white-blue;
+        background-color: white;
     }
     
     #second-expan {
         background-color: $lite-blue;
-        border-radius: 15px 50px;
-        border: 1px solid black;
+        border-radius: 5px 5px;
+        
     }
     
     #second-header {
@@ -129,14 +143,21 @@ $white-blue: #e1f5f3;
 }
 
 @media only screen and (min-width: 768px) {
+
+    #wrapper {
+        height: 500px;
+        
+    }
+
     #header {
         width: 300px;
         height: 50px;
         margin-bottom: 25px;
+        margin-left: 15px;
         background-color: $lite-blue;
         border-radius: 50px 15px;
         box-shadow: 5px 5px $primary-color;
-        border: 1px solid black;
+        
         text-align: center;
         line-height: 50px;
         font-size: 24px;
@@ -145,12 +166,15 @@ $white-blue: #e1f5f3;
     }
     
     #outer {
-        height: 100vh;
+        height: 450px;
+        overflow-y: auto;
     
     }
     
-    #editRating {
-        display: block;
+  
+
+    #userRating {
+        margin-bottom: 10px;
     }
     
     #firstPanel {
@@ -158,19 +182,19 @@ $white-blue: #e1f5f3;
     }
     
     #first-expan {
-        background-color: $white-blue;
-        border-radius: 15px 50px;
-        border: 1px solid black;
+        background-color: white;
+        border-radius: 5px 5px;
+        
     }
     
     #first-header {
-        background-color: $white-blue;
+        background-color: white;
     }
     
     #second-expan {
         background-color: $lite-blue;
-        border-radius: 15px 50px;
-        border: 1px solid black;
+        border-radius: 5px 5px;
+        
     }
     
     #second-header {
@@ -185,58 +209,66 @@ $white-blue: #e1f5f3;
 
 @media only screen and (min-width: 992px) {
 
-#header {
+    #wrapper {
+        height: 500px;
+        
+    }
+
+    #header {
     width: 300px;
     height: 50px;
     margin-bottom: 25px;
+    margin-left: 15px;
     background-color: $lite-blue;
     border-radius: 50px 15px;
     box-shadow: 5px 5px $primary-color;
-    border: 1px solid black;
+    
     text-align: center;
     line-height: 50px;
     font-size: 24px;
 
 
-}
+    }
 
-#outer {
-    height: 100vh;
+    #outer {
+    height: 450px;
+    overflow-y: auto;
+    }
 
-}
+    
 
-#editRating {
-    display: block;
-}
+    #userRating {
+        margin-bottom: 10px;
+    }
 
-#firstPanel {
+    #firstPanel {
     width: 300px;
-}
+    }
 
-#first-expan {
-    background-color: $white-blue;
-    border-radius: 15px 50px;
-    border: 1px solid black;
-}
+    #first-expan {
+    background-color: white;
+    border-radius: 5px 5px;
+    
+    }
 
-#first-header {
-    background-color: $white-blue;
-}
+    #first-header {
+    background-color: white;
+    }
 
-#second-expan {
+    #second-expan {
     background-color: $lite-blue;
-    border-radius: 15px 50px;
-    border: 1px solid black;
-}
+    border-radius: 5px 5px;
+    
+    }
 
-#second-header {
+    #second-header {
     background-color: $lite-blue;
-}
+    }
 
-#edit {
+    #edit {
     display: flex;
     justify-content: center;
-}
+    }
 
 
 }

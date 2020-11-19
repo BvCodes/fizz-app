@@ -8,13 +8,18 @@ $white-blue: #e1f5f3;
 
 @media only screen and (max-width: 600px) {
 
+    #backButton {
+        margin-left: 25%;
+        margin-top: 20px;
+    }
+
     #details {
         display: flex;
         justify-content: center;
         background-color: $bg-lightBlue;
         padding-top: 25px;
         padding-bottom: 25px;
-        //padding-left: 10%;
+
     }
 
     #cardInside {
@@ -26,15 +31,18 @@ $white-blue: #e1f5f3;
     
     .seltzerCard {
         max-width: 205px;
-        background-color: $white-blue;
-        
+        background-color: white;
         border-radius: 15px 50px;
-        //border: 1px solid black;
     }
 
     .cardAvatar {
         background-image: url('../../assets/seltzerlylogo_1-8_100px.png');
        background-size: cover;
+    }
+
+
+    #bubbleIcon {
+        vertical-align: middle;
     }
    
     
@@ -44,9 +52,7 @@ $white-blue: #e1f5f3;
        display: grid;
        column-count: 1;
        row-gap: 25px;
-       //justify-content: center;
-       background-color: #e1f5f3;
-       //padding-right: 10%;
+       background-color:white;
        padding-top: 25px;
        padding-bottom: 25px;
        border-radius: 0;
@@ -56,7 +62,7 @@ $white-blue: #e1f5f3;
    
    #yourOwn {
        margin: auto;
-       border: 1px solid black;
+       //border: 1px solid black;
        border-radius: 15px 50px;
        float: left;
        
@@ -73,9 +79,7 @@ $white-blue: #e1f5f3;
    }
    
    #bubbleComp {
-       margin: auto;
-       //float: left;
-       
+       margin: auto;  
    }
    
    #appFizzyRating {
@@ -84,106 +88,16 @@ $white-blue: #e1f5f3;
        
    
    }
-   
-   
-   
-//    #fizzRating {
-//        display: flex;
-//        justify-content: center;
-//        background-color: $primary-color;
-//        //padding-left: 10%;
-//        //padding-right: 10%;
-//        padding-top: 25px;
-//        padding-bottom: 25px;
-//        border-radius: 0;
-//    }
-
-    // #outer {
-    //     height: 100%
-    // }
-    
-    
-    
-    // #inner {
-    //     width: 99%;
-    //     margin: auto;
-    //     background-color: white;
-    // }
-    // /*
-    // .mat-tab-label {
-    //     min-width: 50px ;
-    //     padding: 5px;
-    //     font-size: 20px;
-    //     background-color: $lite-blue;
-    //     border: 1px solid black;
-    // }
-    // */
-    // .behind-label {
-    //     background-color: white;
-    // }
-    
-    // .label {
-    //     min-width: 50px;
-    //     padding: 5px;
-    //     font-size: 20px;
-    //     background-color: $lite-blue;
-    //     border: 1px solid black;
-    
-    // }
-    
-    // #details {
-    //     display: flex;
-    //     justify-content: center;
-    //     padding-top: 25px;
-    //     padding-bottom: 25px;
-    //     background-color: $lite-pink;
-    //     border-radius: 15px 50px;
-    //     border: 1px solid black;
-        
-        
-    // }
-    
-    // #image {
-    //     padding-top: 50px;
-    // }
-    
-    // .seltzerCard {
-    //     padding-left: 50px;
-    //     padding-right: 50px;
-    //     max-width: 175px;
-    //     background-color: $lite-teal;
-    //     box-shadow: 5px 5px 4px #FF80AB;
-        
-    //     border-radius: 15px 50px;
-    //     border: 1px solid black;
-    
-    // }
-    
-    // .mat-card-content {
-    //     background-color: white;
-    // }
-    
-    // .cardAvatar {
-    //     background-image: url('../../assets/seltzerlylogo_1-8_100px.png');
-    //     background-size: cover;
-    // }
-    
-    // #bubRating {
-    //     display: flex;
-    //     justify-content: center;
-    //     padding-top: 25px;
-    //     padding-bottom: 25px;
-    //     background-color: $lite-pink;
-    //     border-radius: 15px 50px;
-    //     border: 1px solid black;
-    
-        
-    // }
-
 
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 601px) {
+
+
+    #backButton {
+        margin-left: 25%;
+        margin-top: 20px;
+    }
 
 
     #details {
@@ -192,7 +106,6 @@ $white-blue: #e1f5f3;
         background-color: $bg-lightBlue;
         padding-top: 25px;
         padding-bottom: 25px;
-        //padding-left: 10%;
     }
 
     #cardInside {
@@ -204,8 +117,7 @@ $white-blue: #e1f5f3;
     
     .seltzerCard {
         max-width: 205px;
-        background-color: $white-blue;
-        //border: 1px solid black;
+        background-color: white;
 
         border-radius: 15px 50px;
     }
@@ -214,14 +126,17 @@ $white-blue: #e1f5f3;
         background-image: url('../../assets/seltzerlylogo_1-8_100px.png');
        background-size: cover;
     }
+
+    #bubbleIcon {
+        vertical-align: middle;
+    }
    
     
    
     #bubRating {
        display: flex;
        justify-content: center;
-       background-color: #e1f5f3;
-       //padding-right: 10%;
+       background-color:white;
        padding-top: 25px;
        padding-bottom: 25px;
        border-radius: 0;
@@ -231,7 +146,7 @@ $white-blue: #e1f5f3;
    
    #yourOwn {
        margin: auto;
-       border: 1px solid black;
+       //border: 1px solid black;
        border-radius: 15px 50px;
        
    }
@@ -255,112 +170,23 @@ $white-blue: #e1f5f3;
    
    }
    
-   
-   
-//    #fizzRating {
-//        display: flex;
-//        justify-content: center;
-//        background-color: $primary-color;
-//        //padding-left: 10%;
-//        //padding-right: 10%;
-//        padding-top: 25px;
-//        padding-bottom: 25px;
-//        border-radius: 0;
-//    }
-
-    // #outer {
-    //     height: 100vh;
-    // }
-    
-    
-    
-    // #inner {
-    //     width: 100%;
-    //     margin: auto;
-    //     background-color: white;
-    // }
-    // /*
-    // .mat-tab-label {
-    //     min-width: 50px ;
-    //     padding: 5px;
-    //     font-size: 20px;
-    //     background-color: $lite-blue;
-    //     border: 1px solid black;
-    // }
-    // */
-    // .behind-label {
-    //     background-color: white;
-    // }
-    
-    // .label {
-    //     min-width: 50px;
-    //     padding: 5px;
-    //     font-size: 20px;
-    //     background-color: $lite-blue;
-    //     border: 1px solid black;
-    
-    // }
-    
-    // #details {
-    //     display: flex;
-    //     justify-content: center;
-    //     padding-top: 25px;
-    //     padding-bottom: 25px;
-    //     background-color: $lite-pink;
-    //     border-radius: 15px 50px;
-    //     border: 1px solid black;
-        
-        
-    // }
-    
-    // #image {
-    //     padding-top: 50px;
-    // }
-    
-    // .seltzerCard {
-    //     padding-left: 50px;
-    //     padding-right: 50px;
-    //     max-width: 175px;
-    //     background-color: $lite-teal;
-    //     box-shadow: 5px 5px 4px #FF80AB;
-        
-    //     border-radius: 15px 50px;
-    //     border: 1px solid black;
-    
-    // }
-    
-    // .mat-card-content {
-    //     background-color: white;
-    // }
-    
-    // .cardAvatar {
-    //     background-image: url('../../assets/seltzerlylogo_1-8_100px.png');
-    //     background-size: cover;
-    // }
-    
-    // #bubRating {
-    //     display: flex;
-    //     justify-content: center;
-    //     padding-top: 25px;
-    //     padding-bottom: 25px;
-    //     background-color: $lite-pink;
-    //     border-radius: 15px 50px;
-    //     border: 1px solid black;
-    
-        
-    // }
 }
 
 
 @media only screen and (min-width: 768px) {
 
+
+    #backButton {
+        margin-left: 25%;
+        margin-top: 20px;
+    }
+
     #details {
         display: flex;
         justify-content: center;
         background-color: $bg-lightBlue;
         padding-top: 25px;
         padding-bottom: 25px;
-        //padding-left: 10%;
     }
 
     #cardInside {
@@ -372,9 +198,7 @@ $white-blue: #e1f5f3;
     
     .seltzerCard {
         max-width: 205px;
-        background-color: $white-blue;
-        //border: 1px solid black;
-
+        background-color: white;
         border-radius: 15px 50px;
     }
 
@@ -382,14 +206,17 @@ $white-blue: #e1f5f3;
         background-image: url('../../assets/seltzerlylogo_1-8_100px.png');
        background-size: cover;
     }
+
+    #bubbleIcon {
+        vertical-align: middle;
+    }
    
     
    
     #bubRating {
        display: flex;
        justify-content: center;
-       background-color: #e1f5f3;
-       //padding-right: 10%;
+       background-color:white;
        padding-top: 25px;
        padding-bottom: 25px;
        border-radius: 0;
@@ -399,7 +226,7 @@ $white-blue: #e1f5f3;
    
    #yourOwn {
        margin: auto;
-       border: 1px solid black;
+       //border: 1px solid black;
        border-radius: 15px 50px;
        
    }
@@ -422,101 +249,6 @@ $white-blue: #e1f5f3;
        max-width: 287px;
    
    }
-   
-   
-   
-//    #fizzRating {
-//        display: flex;
-//        justify-content: center;
-//        background-color: $primary-color;
-//        //padding-left: 10%;
-//        //padding-right: 10%;
-//        padding-top: 25px;
-//        padding-bottom: 25px;
-//        border-radius: 0;
-//    }
-
-//     #outer {
-//         height: 100vh;
-//     }
-    
-    
-    
-//     #inner {
-//         width: 100%;
-//         margin: auto;
-//         background-color: white;
-//     }
-//     /*
-//     .mat-tab-label {
-//         min-width: 50px ;
-//         padding: 5px;
-//         font-size: 20px;
-//         background-color: $lite-blue;
-//         border: 1px solid black;
-//     }
-//     */
-//     .behind-label {
-//         background-color: white;
-//     }
-    
-//     .label {
-//         min-width: 50px;
-//         padding: 5px;
-//         font-size: 20px;
-//         background-color: $lite-blue;
-//         border: 1px solid black;
-    
-//     }
-    
-//     #details {
-//         display: flex;
-//         justify-content: center;
-//         padding-top: 25px;
-//         padding-bottom: 25px;
-//         background-color: $lite-pink;
-//         border-radius: 15px 50px;
-//         border: 1px solid black;
-        
-        
-//     }
-    
-//     #image {
-//         padding-top: 50px;
-//     }
-    
-//     .seltzerCard {
-//         padding-left: 50px;
-//         padding-right: 50px;
-//         max-width: 175px;
-//         background-color: $lite-teal;
-//         box-shadow: 5px 5px 4px #FF80AB;
-        
-//         border-radius: 15px 50px;
-//         border: 1px solid black;
-    
-//     }
-    
-//     .mat-card-content {
-//         background-color: white;
-//     }
-    
-//     .cardAvatar {
-//         background-image: url('../../assets/seltzerlylogo_1-8_100px.png');
-//         background-size: cover;
-//     }
-    
-//     #bubRating {
-//         display: flex;
-//         justify-content: center;
-//         padding-top: 25px;
-//         padding-bottom: 25px;
-//         background-color: $lite-pink;
-//         border-radius: 15px 50px;
-//         border: 1px solid black;
-    
-        
-//     }
 
 }
 
@@ -524,68 +256,10 @@ $white-blue: #e1f5f3;
 
  @media only screen and (min-width: 992px) {
 
-// #outer {
-//     height: 100%;
-//     background-color: #B3E5FC;
-
-// }
-
-
-
-// #inner {
-//     width: 100%;
-//     margin: auto;
-//     background-color: #B3E5FC;
-// }
-// /*
-// .mat-tab-label {
-//     min-width: 50px ;
-//     padding: 5px;
-//     font-size: 20px;
-//     background-color: $lite-blue;
-//     border: 1px solid black;
-// }
-// */
-// // .behind-label {
-// //     background-color: white;
-// // }
-
-// // .label {
-// //     min-width: 50px;
-// //     padding: 5px;
-// //     font-size: 20px;
-// //     background-color: $lite-blue;
-// //     border: 1px solid black;
-
-// // }
-
-// 
-//     display: flex;
-//     justify-content: center;
-//    //padding-top: 25px;
-//     //padding-bottom: 25px;
-//     background-color: green;
-//     //border-radius: 15px 50px;
-//     //border: 1px solid black;
-    
-    
-// }
-
-// #image {
-//     padding-top: 50px;
-// }
-
-// .seltzerCard {
-//     padding-left: 50px;
-//     padding-right: 50px;
-//     max-width: 230px;
-//     background-color: $lite-teal;
-//     box-shadow: 5px 5px 4px #FF80AB;
-    
-//     border-radius: 15px 50px;
-//     border: 1px solid black;
-
-// }
+#backButton {
+    margin-left: 25%;
+    margin-top: 20px;
+}
 
 #details {
     display: flex;
@@ -593,8 +267,11 @@ $white-blue: #e1f5f3;
     background-color: $bg-lightBlue;
     padding-top: 25px;
     padding-bottom: 25px;
-    //padding-left: 10%;
 }
+
+
+
+
 
 #cardInside {
     margin-left: 15px;
@@ -603,30 +280,29 @@ $white-blue: #e1f5f3;
     
 }
 
+
+
 .seltzerCard {
     max-width: 205px;
-    background-color: $white-blue;
-    //border: 1px solid black;
-
+    background-color: white;
     border-radius: 15px 50px;
 }
-
-//.mat-card-content {
- //   background-color: white;
-//}
 
  .cardAvatar {
      background-image: url('../../assets/seltzerlylogo_1-8_100px.png');
     background-size: cover;
  }
 
+ #bubbleIcon {
+    vertical-align: middle;
+}
+
  
 
  #bubRating {
     display: flex;
     justify-content: center;
-    background-color: #e1f5f3;
-    //padding-right: 10%;
+    background-color:white;
     padding-top: 25px;
     padding-bottom: 25px;
     border-radius: 0;
@@ -636,7 +312,7 @@ $white-blue: #e1f5f3;
 
 #yourOwn {
     margin: auto;
-    border: 1px solid black;
+    //border: 1px solid black;
     border-radius: 15px 50px;
     
 }
@@ -660,28 +336,4 @@ p {
 
 }
 
-
-
-// #fizzRating {
-//     display: flex;
-//     justify-content: center;
-//     background-color: $primary-color;
-//     //padding-left: 10%;
-//     //padding-right: 10%;
-//     padding-top: 25px;
-//     padding-bottom: 25px;
-//     border-radius: 0;
-// }
-
-// #bubRating {
-//     display: flex;
-//     justify-content: center;
-//     padding-top: 25px;
-//     padding-bottom: 25px;
-//     background-color: $lite-pink;
-//     border-radius: 15px 50px;
-//     border: 1px solid black;
-
-    
-    //}
 }

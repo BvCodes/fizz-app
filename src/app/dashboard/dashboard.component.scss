@@ -4,6 +4,7 @@ $lite-pink: #FF80AB;
 $lite-blue: #80D8FF;
 $lite-teal: #64FFDA;
 $white-blue: #e1f5f3;
+$bg-lightBlue: #B3E5FC;
 
 @media only screen and (max-width: 600px) {
 
@@ -15,14 +16,12 @@ h1 {
     width: 95% ;
     margin: auto;
     margin-top: 25px;
-    
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 7px;
     padding-bottom: 7px;
     font-size: 30px;
     font-weight: bold;
-    border: 1px solid black;
     border-radius: 15px 50px;
     box-shadow: 5px 5px $primary-color;
 
@@ -36,13 +35,11 @@ h2 {
     font-size: 25px;
     background-color: $lite-blue;
     border-radius: 15px 50px;
-    border: 1px solid black;
-    //box-shadow: 5px 5px $primary-color;
 }
 
 
 #topFiveContainer {
-    background-color: $white-blue;
+    background-color: white;
     padding-top: 25px;
 }
 
@@ -53,10 +50,7 @@ h2 {
     max-width: 230px;
     background-color: $accent-color;
     box-shadow: 5px 5px $lite-blue;
-    
     border-radius: 15px 50px;
-    border: 1px solid black;
-
 }
 
 .mat-card-title {
@@ -77,12 +71,6 @@ h2 {
     border-radius: 15px 50px;
 }
 
-#outterTopFive {
-        
-    //margin-left: 15%;
-    //margin-right: 15%;
-    
-}
 
 #innerTopFive {
     display: grid;
@@ -90,12 +78,8 @@ h2 {
 }
 
 .topFive {
-    //display: flex;
-    //justify-content: center;
-    //float: left;
     background-color: none;
     margin: auto;
-    //padding-left: 50px;
     padding-bottom: 50px;
     
     
@@ -110,9 +94,8 @@ h2 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-
-    
+    height: 200px;
+    width: 100px;
 }
 
 .cardHeader {
@@ -177,10 +160,8 @@ h2 {
         padding-bottom: 7px;
         font-size: 37px;
         font-weight: bold;
-        border: 1px solid black;
-        border-radius: 15px 50px;
         box-shadow: 5px 5px $primary-color;
-    
+        border-radius: 15px 50px;
     }
     
     h2 {
@@ -191,13 +172,13 @@ h2 {
         margin-bottom: 0;
         background-color: $lite-blue;
         border-radius: 15px 50px;
-        border: 1px solid black;
-        //box-shadow: 5px 5px $primary-color;
+        
+       
     }
     
     
     #topFiveContainer {
-        background-color: $white-blue;
+        background-color: white;
         padding-top: 25px;
     }
   
@@ -209,7 +190,7 @@ h2 {
         box-shadow: 5px 5px $lite-blue;
         
         border-radius: 15px 50px;
-        border: 1px solid black;
+        
     
     }
     
@@ -236,6 +217,7 @@ h2 {
         margin-left: 10%;
         margin-right: 10%;
         
+        
     }
 
     #innerTopFive {
@@ -244,14 +226,8 @@ h2 {
     }
     
     .topFive {
-        //display: flex;
-        //justify-content: center;
-       //float: left;
-        //display: grid;
-        //column-count: 1;
         background-color: none;
         margin: auto;
-        //margin-left: 5%;
         padding-bottom: 50px;
         
     }
@@ -265,7 +241,8 @@ h2 {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        height: 200px;
+        width: 100px;
     
         
     }
@@ -317,7 +294,7 @@ h2 {
         padding-bottom: 7px;
         font-size: 37px;
         font-weight: bold;
-        border: 1px solid black;
+        
         border-radius: 15px 50px;
         box-shadow: 5px 5px $primary-color;
     
@@ -329,8 +306,8 @@ h2 {
         font-size: 25px;
         background-color: $lite-blue;
         border-radius: 15px 50px;
-        border: 1px solid black;
-        //box-shadow: 5px 5px $primary-color;
+        
+        
     }
     
     
@@ -340,7 +317,7 @@ h2 {
         box-shadow: 5px 5px $lite-blue;
         
         border-radius: 15px 50px;
-        border: 1px solid black;
+        
     
     }
     
@@ -375,11 +352,7 @@ h2 {
     }
     
     .topFive {
-        //display: flex;
-        //justify-content: center;
-        //float: left;
         background-color: none;
-        //margin-left: 5%;
         margin: auto;
         padding-bottom: 50px;
         
@@ -394,7 +367,8 @@ h2 {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        height: 200px;
+        width: 100px;
     
         
     }
@@ -447,7 +421,7 @@ h2 {
         padding-bottom: 7px;
         font-size: 37px;
         font-weight: bold;
-        border: 1px solid black;
+        
         border-radius: 15px 50px;
         box-shadow: 5px 5px $primary-color;
     
@@ -459,8 +433,7 @@ h2 {
         font-size: 25px;
         background-color: $lite-blue;
         border-radius: 15px 50px;
-        border: 1px solid black;
-        //box-shadow: 5px 5px $primary-color;
+        
     }
     
     
@@ -470,7 +443,7 @@ h2 {
         box-shadow: 5px 5px $lite-blue;
         
         border-radius: 15px 50px;
-        border: 1px solid black;
+        
     
     }
     
@@ -505,20 +478,10 @@ h2 {
     }
     
     .topFive {
-        //display: flex;
-        //justify-content: center;
-        //float: left;
         background-color: none;
-        //margin-left: 10%;
         margin: auto;
-        //padding-left: 8%;
         padding-bottom: 5%;
         
-    }
-    
-    #img-div {
-        width: 200px;
-        height: 200px;
     }
     
     #cardImage {
@@ -526,7 +489,8 @@ h2 {
 
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        height: 200px;
+        width: 100px;
     
         
     }

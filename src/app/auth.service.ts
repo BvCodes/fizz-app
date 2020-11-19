@@ -48,47 +48,31 @@ export class AuthService {
       const provider = new auth.GoogleAuthProvider();
       const credential = await this.afAuth.signInWithPopup(provider);
       return this.updateUserData(credential.user);
-      //this.afAuth.signInWithPopup(new auth.GoogleAuthProvider());
-  
-  /*    var provider = new auth.GoogleAuthProvider();
 
-      this.afAuth.signInWithPopup(provider).then(function(result) {
-        var token = result.credential.providerId;
-        var user = result.user;
-        this.user1 = user;
-
-      }).catch(function(error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        var email = error.email;
-        var credential = error.credential;
-        
-      });
-      */
-      }
-
-  getUser(): Observable<User> {
-    return this.user$;
-  }
-  
-
-  private updateUserData({ uid, email, displayName, photoURL }: User) {
-    const userRef: AngularFirestoreDocument<User> = this.firestore.doc(`users/${uid}`);
-
-    const data = {
-      uid,
-      email,
-      displayName,
-      photoURL,
     }
 
-    return userRef.set(data, { merge: true })
-  }
+    getUser(): Observable<User> {
+      return this.user$;
+    }
+    
 
-  async signOut() {
-    await this.afAuth.signOut();
-    this.router.navigate(['/']);
-  }
+    private updateUserData({ uid, email, displayName, photoURL }: User) {
+      const userRef: AngularFirestoreDocument<User> = this.firestore.doc(`users/${uid}`);
+
+      const data = {
+        uid,
+        email,
+        displayName,
+        photoURL,
+      }
+
+      return userRef.set(data, { merge: true })
+    }
+
+    async signOut() {
+      await this.afAuth.signOut();
+      this.router.navigate(['/']);
+    }
 
   
 

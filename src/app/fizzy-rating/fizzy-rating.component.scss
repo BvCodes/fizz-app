@@ -8,10 +8,13 @@ $lite-teal: #64FFDA;
 
 
 #outer { 
-    
+    max-height: 460px;
+    width: 300px;
     background-color: #e1f5f3;
     border-radius: 15px 50px;
-    border: 1px solid black;
+    //border: 1px solid black;
+    overflow-y: auto;
+    overflow-x: hidden;
     
     
 }
@@ -28,10 +31,14 @@ $lite-teal: #64FFDA;
     width: 225px;
     background-color: $lite-teal;
     border-radius: 15px 50px;
-    border: 1px solid black;
     
-
+    
 }
+
+#bubbleIcon {
+    vertical-align: middle;
+}
+
 #upVoteButton {
     display: flex;
     justify-content: center;
@@ -53,9 +60,12 @@ $lite-teal: #64FFDA;
 }
 
 p {
+    height: 30px;
+    line-height: 30px;
     text-align: center;
-    border: 1px solid black;
-    border-radius: 15px 50px;
+    background-color: $primary-color;
+    border-radius: 5px 5px;
+    
     
 }
 

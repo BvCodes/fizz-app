@@ -1,88 +1,32 @@
-<!--
 
-<div *ngIf="fizzy">
-    <div id="details">
-    <div id="title">
-    <h2>{{fizzy.brand | uppercase}} - {{fizzy.flavor | uppercase}} Details</h2>
-    </div>
-    <br>
-    <div>
-        <div>
-            <img src="{{fizzy.photoUrl}}" alt="{{fizzy.flavor}} {{fizzy.brand}}">
-        </div>
-        <h4>id: {{fizzy.fizzyId}}</h4>
-        <h4>brand: {{fizzy.brand}}</h4>
-        <h4>flavor: {{fizzy.flavor}}</h4>
-        <h4>user rating: {{fizzy.avgRating}}</h4>
-        <app-bubble-rating  [fizzyId]="fizzy.fizzyId" 
-                            [brand]="fizzy.brand" 
-                            [flavor]="fizzy.flavor"
-                            [avgRating]="fizzy.avgRating"
-                            [numberOfRatings]="fizzy.numberOfRatings"
-                            [totalRating]="fizzy.totalRating"></app-bubble-rating>
-        <app-fizzy-rating [fizzyId]="fizzy.fizzyId"></app-fizzy-rating>
-    </div>
-    <br>
-    <button (click)="goBack()">go back</button>
-    </div>
-</div>
-
--->
 <div *ngIf="fizzy" id="outer">
-<div id="inner">
-<!-- <mat-tab-group id="mat-tab"> -->
     
-    <!-- <mat-tab label="Details" class="label"> -->
-    <!--
-        <div id="details">
-            <div id="title">
-            {{fizzy.brand | uppercase}} - {{fizzy.flavor | uppercase}}
-            </div>
-            <div id="image">
-                <img src="{{fizzy.photoUrl}}" alt="{{fizzy.flavor}} {{fizzy.brand}}">
-            </div>
-            <div id="info">
-                <mat-list role="list">
-                    <mat-list-item role="listitem">
-                        brand: {{fizzy.brand}} 
-                    </mat-list-item>
-                    <mat-list-item role="listitem">
-                        flavor: {{fizzy.flavor}} 
-                    </mat-list-item>
-                    <mat-list-item role="listitem">
-                        avg. user rating: {{fizzy.avgRating}} 
-                    </mat-list-item>
-                </mat-list>
-            </div>
-        </div>
-        -->
-        <div id="details">
+<div id="inner">
+    <a routerLink="/fizzList"><button mat-raised-button color="primary" id="backButton"><mat-icon>arrow_back</mat-icon> Back</button></a>
+    <div id="details">
+        
         <mat-card class="seltzerCard" >
             <div id="cardInside">
-            <mat-card-header>
-                <div mat-card-avatar class="cardAvatar"></div>
-                <mat-card-title>{{ fizzy.brand }} {{ fizzy.flavor }} <hr></mat-card-title>
-                <mat-card-subtitle>avg rating: {{ fizzy.avgRating }} <img src="../../assets/icons-02_blue.png" id="bubbleIcon" height="20px" width="20px" alt="bubble icon"></mat-card-subtitle>
-                
-            </mat-card-header>
+                <mat-card-header>
+                    <div mat-card-avatar class="cardAvatar"></div>
+                    <mat-card-title>{{ fizzy.brand }} {{ fizzy.flavor }} <hr></mat-card-title>
+                    <mat-card-subtitle>avg rating: {{ fizzy.avgRating }} <img src="../../assets/icons-02_blue.png" id="bubbleIcon" height="20px" width="20px" alt="bubble icon"></mat-card-subtitle>
+                    
+                </mat-card-header>
             
-            <img mat-card-image src="{{ fizzy.photoUrl }}" 
-                                alt="{{ fizzy.brand }} {{ fizzy.flavor}}" 
-                                id="cardImage"
-                                >
-                             
-            <mat-card-content class="mat-card-content">
-            </mat-card-content>
+                <img mat-card-image src="{{ fizzy.photoUrl }}" 
+                                    alt="{{ fizzy.brand }} {{ fizzy.flavor}}" 
+                                    id="cardImage"
+                                    >
+                                
+                <mat-card-content class="mat-card-content">
+                </mat-card-content>
             </div>
         </mat-card>
-        </div>
+    </div>
 
-    <!-- </mat-tab> -->
     
-    <!-- <mat-tab label="Rate this Seltzer" class="label"> -->
         <div id="bubRating">
-            <!-- <h1>submit your own rating</h1><br> -->
-        
             <div id="yourOwn">
                 <div id="insideOwn">
                     <p>-submit your own rating-</p>
@@ -96,13 +40,6 @@
             </div>
             <app-fizzy-rating id="appFizzyRating" [fizzyId]="fizzy.fizzyId"></app-fizzy-rating>        
         </div>
-    <!-- </mat-tab> -->
     
-    <!-- <mat-tab label="User Ratings" class="label"> -->
-    <!-- <div id="fizzRating">
-        <app-fizzy-rating [fizzyId]="fizzy.fizzyId"></app-fizzy-rating> -->
-    <!-- </mat-tab> -->
-<!-- </mat-tab-group> -->
-    <!-- </div> -->
 </div>
 </div>

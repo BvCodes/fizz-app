@@ -27,6 +27,8 @@ export class RatingService {
   
   }
 
+  // returns obsevable collection of Bubbles or Ratings that a single user has submitted
+
   getUserRating(userId): Observable<Bubbles[]> {
     const bubbleRef = this.firestore.collection<Bubbles>('bubbles', ref => ref.where('uid', '==', userId));
     return bubbleRef.valueChanges();
@@ -34,7 +36,7 @@ export class RatingService {
   }
   
 
-  
+  // returns observale doc of a particular users rating for a particular seltzer
 
   getUserRatingCollection(userId, fizzyId) {
     var userRef = this.firestore.collection('bubbles').doc(`${userId}_${fizzyId}`);
@@ -42,13 +44,15 @@ export class RatingService {
   }
 
 
+  // Returns
+
   getFizzyRating(fizzyId): Observable<Bubbles[]> {
     const fizzyRef = this.firestore.collection<Bubbles>('bubbles', ref => ref.where('fizzyId', '==', fizzyId).limit(10));
     return fizzyRef.valueChanges();
     
   }
 
-  // new data structure, top 10 upvotes 
+  // returns an observalbe collections of the ratings for a seltzer ordered by number of Upvotes descending. It is limited to 10 ratings
 
   getFizzyRating2(fizzyId): Observable<Bubbles[]> {
     const fizzyRef = this.firestore.collection('fizzies').doc(`${fizzyId}`).collection<Bubbles>('rating', ref => ref.orderBy("numVotes", "desc").limit(10)); 
@@ -56,33 +60,14 @@ export class RatingService {
     
   }
 
+  // returns a collection of ratins for a particular seltzer
+
   queryFizzRatings(fizzyId) {
     const bubbleRef = this.firestore.collection<Bubbles>('bubbles', ref => ref.where('fizzyId', '==', fizzyId));
     return bubbleRef;
   }
   
-  /*
-  getFirstFiveRatings(fizzyId) {
-    const votes = 'numVotes'
-    const pageSize = 5;
-    //const bubbleRef = this.firestore.collection<Bubbles>('bubbles', ref => ref.where('fizzyId', '==', fizzyId).orderBy(votes).limit(pageSize));
-    const bubbleRef = this.queryFizzRatings(fizzyId);
   
-    return bubbleRef.ref.orderBy(votes).limit(pageSize);
-    
-  }
-
-  nextFiveRatings(last, fizzyId) {
-    const votes = 'numVotes'
-    const pageSize = 5;
-   var ratings = this.getFirstFiveRatings(fizzyId);
-   return ratings.ref.orderBy(votes).startAfter(last[votes].limit(pageSize))
-  }
-
-  prevFiveRatings(prev, fizyId) {
-
-  }
-*/
 
   
 
@@ -96,82 +81,12 @@ export class RatingService {
 
   }
 
-  // trying to separate the check from the set function. If check turn out true, then nothing should happen, 
-  // if the check is false, then the set function should run. Hoping this keeps from the numbers updating
-  // when they shouldn't 
+ 
 
-
-  // bring the update avg ratigng function over to this service and turn the variables into parameters on the
-  // function
-
-  checkForRating(uid:string, fizzyId:string) {
-    const ratingPath = `bubbles/${uid}_${fizzyId}`;
-    var result;
-    this.firestore.doc(ratingPath).get().toPromise()
-      .then(docSnapShot => {
-        if (docSnapShot.exists) {
-          console.log(docSnapShot)
-          result = 1;
-          console.log(result);
-        } 
-      })
-    return result
-  }
-  /*
-  updateRatingNumbers() {
-    const totalRating = this.totalRating;
-    const numberOfRating = this.numberOfRatings;
-    var newAvgRating;
-    var newTotalRating;
-    var newNumberOfRating;
-
-    newTotalRating = this.bubbleForm.value.value + totalRating;
-    newNumberOfRating = numberOfRating + 1;
-    newAvgRating = newTotalRating / newNumberOfRating;
-    
-
-    this.ratingService.updateAvgRating(Math.round(newAvgRating), newNumberOfRating, newTotalRating, this.fizzyId);
-    
-    
-  }
-  */
-  // this is the correct logic for this problem. This is the function that works.
-  checkForRating2(description: string, 
-                  fizzyId: string, 
-                  uid: string, 
-                  value: number, 
-                  displayName: string, 
-                  brand: string, 
-                  flavor:string, 
-                  photoURL: string, 
-                  numVotes: number,
-                  numberOfRatings: number,
-                  totalRating: number,
-                  ) {
-    const ratingPath = `bubbles/${uid}_${fizzyId}`;
-    const rating = { description, fizzyId, uid, value, displayName, brand, flavor, photoURL, numVotes };
-    
-    const newTotalRating = totalRating + value;
-    const newNumberOfRatings = numberOfRatings + 1;
-    const newAvgRating = newTotalRating / newNumberOfRatings;
-    this.firestore.firestore.doc(ratingPath).get()
-      .then(docSnapshot => {
-        if (!docSnapshot.exists) {
-          this.firestore.doc(ratingPath).set(rating);
-          
-          this.updateAvgRating(Math.round(newAvgRating), newNumberOfRatings, newTotalRating, fizzyId);
-          console.log("sent the doc, from the service")
-          window.alert("your rating was succesfully submitted")
-        } else {
-          console.log("didn't send, from the service")
-          window.alert("you've already rated this seltzer, please edit your rating in your user profile")
-        }
-        
-      });
-  }
-
-  // trying to redo checkForRating2 to set up new data structure. This should allow for better querying based on upvotes
-  // will have to change upVote pathing as well
+  // working function that checks to see if a user has already submitted a rating for a seltzer
+  // if they have not, it sets the data into the database
+  // if they have already rated it, it tells them that they have already rated.
+  // they can then edit that rating in their user profile instead.
 
   checkForRating3(description: string, 
                   fizzyId: string, 
@@ -198,17 +113,19 @@ export class RatingService {
           this.firestore.doc(ratingPath).set(rating);
           this.firestore.doc(bubblePath).set(rating);
           this.updateAvgRating(Math.round(newAvgRating), newNumberOfRatings, newTotalRating, fizzyId);
-          console.log("sent the doc, from the service")
+          
           //window.alert("your rating was succesfully submitted")
           this._snackBar.open("your rating was successfully submitted", "close", {duration: 5000,});
         } else {
-          console.log("didn't send, from the service")
+          
           //window.alert("you've already rated this seltzer, please edit your rating in your user profile")
           this._snackBar.open("you've already reated this seltzer, please edit your rating in your user profile", "close", {duration: 5000,})
         }
         
       });
   }
+
+  //
 
   setUserRating3(description: string, fizzyId: string, uid: string, value: number, displayName: string, brand: string, flavor, photoURL: string, numVotes: number) {
     const rating = { description, fizzyId, uid, value, displayName, brand, flavor, photoURL, numVotes };
@@ -235,64 +152,13 @@ export class RatingService {
       })
   }
 
-  setUpVote(uid: string, fizzyId: string, upVote: boolean, votes: number) {
-    /*
-    const vote = { upVote }
-    //const upVoteRef = this.firestore.doc(`bubbles/${uid}_${fizzyId}/upVote/${uid}`);
-    var numVotes = votes + 1;
-    const numVotesAdd = { numVotes }
-    const ratingPath = `bubbles/${uid}_${fizzyId}`;
-    const upVotePath = `bubbles/${uid}_${fizzyId}/upVote/${uid}`;
-
-    //if (upVoteRef == null) {
-    this.firestore.doc(ratingPath).set(numVotesAdd, {merge: true});
-      
-      //} 
-    this.firestore.doc(upVotePath).set(vote);
-    */
-    const vote = { upVote };
-    var numVotes = votes + 1;
-    const numVotesAdd = { numVotes }
-    const ratingPath = `bubbles/${uid}_${fizzyId}`;
-    const upVotePath = `bubbles/${uid}_${fizzyId}/upVote/${uid}`;
-
-    this.firestore.doc(upVotePath).get().toPromise()
-      .then(docSnapShot => {
-        if (!docSnapShot.exists) {
-          this.firestore.doc(upVotePath).set(vote);
-          this.firestore.doc(ratingPath).set(numVotesAdd, {merge: true});
-          console.log("your up vote was counted");
-          //window.alert("your upvote was counted");
-          this._snackBar.open("your upvote was counted", "close", {duration: 5000,});
-        } 
-        else 
-        {
-          console.log("already up voted, can't do it twice");
-          //window.alert("you have already upvoted this rating, can only upvote each rating once");
-          this._snackBar.open("already up voted, can't do it twice", "close", {duration: 5000,});
-        }
-      })
-   
-}
 
 
-// new rating path 
+
+// sets the upvote and calculates the total upvotes for a rating
 
 setUpVote2(uid: string, fizzyId: string, upVote: boolean, votes: number) {
-  /*
-  const vote = { upVote }
-  //const upVoteRef = this.firestore.doc(`bubbles/${uid}_${fizzyId}/upVote/${uid}`);
-  var numVotes = votes + 1;
-  const numVotesAdd = { numVotes }
-  const ratingPath = `bubbles/${uid}_${fizzyId}`;
-  const upVotePath = `bubbles/${uid}_${fizzyId}/upVote/${uid}`;
-
-  //if (upVoteRef == null) {
-  this.firestore.doc(ratingPath).set(numVotesAdd, {merge: true});
-    
-    //} 
-  this.firestore.doc(upVotePath).set(vote);
-  */
+  
   const vote = { upVote };
   var numVotes = votes + 1;
   const numVotesAdd = { numVotes }
@@ -305,13 +171,11 @@ setUpVote2(uid: string, fizzyId: string, upVote: boolean, votes: number) {
         this.firestore.doc(upVotePath).set(vote);
         this.firestore.doc(ratingPath).set(numVotesAdd, {merge: true});
         console.log("your up vote was counted");
-        //window.alert("your upvote was counted")
         this._snackBar.open("your upvote was counted", "close", {duration: 5000,});
       } 
       else 
       {
         console.log("already up voted, can't do it twice");
-        //window.alert("you have already upvoted this rating, can only upvote each rating once")
         this._snackBar.open("already up voted, can't do it twice", "close", {duration: 5000,});
       }
     })
@@ -320,39 +184,29 @@ setUpVote2(uid: string, fizzyId: string, upVote: boolean, votes: number) {
 
 
 
-  checkForUpVote(uid: string, fizzyId: string)  {
-    const upVoteRef = this.firestore.doc(`bubbles/${uid}_${fizzyId}/upVote/${uid}`);
-    return upVoteRef.valueChanges();
-  }
+  // checks to see if a user has upvoted a rating already
 
   checkForUpVote2(uid: string, fizzyId: string)  {
     const upVoteRef = this.firestore.doc(`fizzies/${fizzyId}/rating/${uid}/upVote/${uid}`);
     return upVoteRef.valueChanges();
   }
 
-  
+  // updates the avg rating of a seltzer
 
   updateAvgRating(avgRating: number, numberOfRatings: number, totalRating: number, fizzyId: string) {
     const updateRating = { avgRating, numberOfRatings, totalRating };
     this.firestore.collection("fizzies").doc(fizzyId).set(updateRating, {merge: true});
   }
 
+  // edits the average rating of a seltzer
+  
   editAvgRating(avgRating: number, totalRating: number, fizzyId: string) {
     const editRating = { avgRating, totalRating };
     this.firestore.collection("fizzies").doc(fizzyId).update(editRating)
     ;
   }
 
-  setTestRating(description: string, value: number, uid: string) {
-    const rating = { description, value, uid }
-    return this.firestore.collection("bubbles").add(rating);
-  }
-
-  setTestTest(description: string, value: number, uid: string) {
-    const rating = { description, value, uid }
-    return this.firestore.collection("bubbles").doc(uid).set(rating);
-  }
-
+ 
 
 
 }

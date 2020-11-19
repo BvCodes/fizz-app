@@ -30,24 +30,11 @@ export class UserProfileComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    //this.getUser();
-    
-    
-    
+
   }
 
   
 
-
-
-
-/*
-  getUser() {
-    this.user = this.auth.user$.subscribe(
-      user => this.user = user
-    );
-  }
-*/
   getUserRatings() {
     this.userRatings = this.ratingService.getUserRating(this.user.uid);
 

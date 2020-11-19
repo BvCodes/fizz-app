@@ -4,15 +4,21 @@ $lite-pink: #FF80AB;
 $lite-blue: #80D8FF;
 $lite-teal: #64FFDA;
 
+
+#wrapper {
+    min-height: 100vh;
+}
+
 #welcome {
     margin-top: 50px;
+    margin-left: 15px;
     height: 100px;
     width: 300px;
     text-align: center;
     line-height: 50px;
     background-color: $primary-color;
     border-radius: 15px 50px;
-    border: 1px solid black;
+    
     font-size: 30px;
     
 
@@ -31,16 +37,60 @@ $lite-teal: #64FFDA;
     background-color: $lite-blue;
     border-radius: 15px 50px;
     font-size: 30px;
-    border: 1px solid black;
+    
 }
 .signButtons {
-    border-radius: 50px 15px;
+    margin-left: 15px;
+    border-radius: 5px 5px;
     border: 1px solid black;
     margin-top: 50px;
+    
 }
 
 #login {
+    display: flex;
     height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+    
     
 }
+
+#loginOuter {
+    display: flex;
+    height: 100vh;
+    border: 1px solid black;
+    align-items: center;
+}
+
+#loginInner {
+    border: 1px solid black;
+    align-self: center;
+}
+
+#card {
+    width: 300px;
+    height: 150px;
+    
+    margin: auto;
+    text-align: center;
+    border-radius: 5px 5px;
+    font-size: 28px;
+}
+
+#title {
+    justify-self: center;
+}
+
+#loginButton {
+    height: 100px;
+    width: 100px;
+    border-radius: 5px 5px;
+    border: 1px black dashed;
+    font-size: 20px;
+}
+
+
+
 

@@ -1,3 +1,4 @@
+<div id="wrapper">
 <div *ngIf="auth.user$ | async as user; else login">
 
     <div id="welcome">
@@ -19,13 +20,22 @@
 </div>
 
 <ng-template #login>
-    <div id="login">
-    <button mat-raised-button color="primary" class="signButtons" (click)="auth.googleSignin()">
-        Login with Google
-    </button>
+    <!-- <div id="login">
+        <div id="loginInner">
+            <button mat-raised-button color="primary" class="signButtons" (click)="auth.googleSignin()">
+                Login with Google
+            </button>
+        </div>
+    </div> -->
+    <div id="loginOuter">
+        <mat-card id="card">
+            <mat-card-title id="title">login with Google</mat-card-title>
+                <hr>
+            <mat-card-actions><button mat-raised-button color="primary" id="loginButton" (click)="auth.googleSignin()">login</button></mat-card-actions>
+        </mat-card>
     </div>
 </ng-template>
-
+</div>
 
 
 

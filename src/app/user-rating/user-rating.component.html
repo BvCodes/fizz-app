@@ -1,27 +1,12 @@
+
+<div id="wrapper">
 <div id="header">
 Your Seltzer Ratings:
 </div>
-<!--
-    <ul>
-        <li *ngFor="let bubbles of userBubbles">
-            {{ bubbles.brand }} {{ bubbles.flavor}} - {{ bubbles.value }} <br> {{ bubbles.description }}<br>
-            <button mat-raised-button color="primary" (click)="toggleEdit()">Edit</button>
-            <h3 id="editRating">
-                <app-edit-rating    
-                    [fizzyId]="bubbles.fizzyId" 
-                    [brand]="bubbles.brand" 
-                    [flavor]="bubbles.flavor"
-                    [displayName]="bubbles.displayName"
-                    [uid]="bubbles.uid"
-                    [value]="bubbles.value">
-                </app-edit-rating>
-                
-            </h3>
-        </li>
-    </ul>
--->
+
 <div id="outer">
 <div id="userRating" *ngFor="let bubbles of userBubbles">
+
     <mat-accordion>
         <mat-expansion-panel id="first-expan">
             
@@ -71,4 +56,4 @@ Your Seltzer Ratings:
     </mat-accordion>
 </div>
 </div>
-
+</div>
