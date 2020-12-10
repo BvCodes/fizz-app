@@ -3,6 +3,7 @@ $primary-color: #00B0FF;
 $lite-pink: #FF80AB;
 $lite-blue: #80D8FF;
 $lite-teal: #64FFDA;
+$bg-lightBlue: #B3E5FC;
 
 
 
@@ -10,7 +11,7 @@ $lite-teal: #64FFDA;
 #outer { 
     max-height: 460px;
     width: 300px;
-    background-color: #e1f5f3;
+    background-color: $bg-lightBlue;
     border-radius: 15px 50px;
     //border: 1px solid black;
     overflow-y: auto;

@@ -1,10 +1,9 @@
 
 <div *ngIf="fizzy" id="outer">
-    
 <div id="inner">
     <a routerLink="/fizzList"><button mat-raised-button color="primary" id="backButton"><mat-icon>arrow_back</mat-icon> Back</button></a>
     <div id="details">
-        
+
         <mat-card class="seltzerCard" >
             <div id="cardInside">
                 <mat-card-header>
@@ -23,10 +22,26 @@
                 </mat-card-content>
             </div>
         </mat-card>
+
+        <div id="yourOwn">
+            <div id="insideOwn">
+                <p>-submit your own rating-</p>
+                <app-bubble-rating id="bubbleComp" [fizzyId]="fizzy.fizzyId" 
+                                    [brand]="fizzy.brand" 
+                                    [flavor]="fizzy.flavor"
+                                    [avgRating]="fizzy.avgRating"
+                                    [numberOfRatings]="fizzy.numberOfRatings"
+                                    [totalRating]="fizzy.totalRating"></app-bubble-rating>
+            </div>
+        </div>
+        
+        
+
+        <app-fizzy-rating id="appFizzyRating" [fizzyId]="fizzy.fizzyId"></app-fizzy-rating> 
     </div>
 
     
-        <div id="bubRating">
+        <!-- <div id="bubRating" >
             <div id="yourOwn">
                 <div id="insideOwn">
                     <p>-submit your own rating-</p>
@@ -39,7 +54,7 @@
                 </div>
             </div>
             <app-fizzy-rating id="appFizzyRating" [fizzyId]="fizzy.fizzyId"></app-fizzy-rating>        
-        </div>
+        </div> -->
     
 </div>
 </div>
