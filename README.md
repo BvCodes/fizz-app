@@ -32,7 +32,7 @@ The app allows users to browse, comment and rate various brand/flavors of seltze
 				Edit-rating: Form that allows users to input their edited rating and submit. It does so while accurately changing the avg rating of the seltzer. 
 				
 
-##Notable Methods
+## Notable Methods
 
 -Auth.service - googleSignin() - creates the async auth state and sends a pop-up that allows users to sign in with Google Auth sign-in.
 
