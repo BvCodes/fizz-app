@@ -13,9 +13,19 @@ $white-blue: #e1f5f3;
         margin-top: 20px;
     }
 
+    // #details {
+    //     display: flex;
+    //     justify-content: center;
+    //     background-color: $bg-lightBlue;
+    //     padding-top: 25px;
+    //     padding-bottom: 25px;
+
+    // }
+
+
     #details {
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr;
         background-color: $bg-lightBlue;
         padding-top: 25px;
         padding-bottom: 25px;
@@ -31,13 +41,14 @@ $white-blue: #e1f5f3;
     
     .seltzerCard {
         max-width: 205px;
+        margin: auto;
         background-color: white;
         border-radius: 15px 50px;
     }
 
     .cardAvatar {
         background-image: url('../../assets/seltzerlylogo_1-8_100px.png');
-       background-size: cover;
+        background-size: cover;
     }
 
 
@@ -48,17 +59,17 @@ $white-blue: #e1f5f3;
     
     
    
-    #bubRating {
-       display: grid;
-       column-count: 1;
-       row-gap: 25px;
-       background-color:white;
-       padding-top: 25px;
-       padding-bottom: 25px;
-       border-radius: 0;
+//     #bubRating {
+//        display: grid;
+//        column-count: 1;
+//        row-gap: 25px;
+//        background-color:white;
+//        padding-top: 25px;
+//        padding-bottom: 25px;
+//        border-radius: 0;
        
    
-   }
+//    }
    
    #yourOwn {
        margin: auto;
@@ -84,6 +95,7 @@ $white-blue: #e1f5f3;
    
    #appFizzyRating {
        margin: auto;
+       margin-top: 15px;
        max-width: 287px;
        
    
@@ -100,13 +112,23 @@ $white-blue: #e1f5f3;
     }
 
 
+    // #details {
+    //     display: flex;
+    //     justify-content: center;
+    //     background-color: $bg-lightBlue;
+    //     padding-top: 25px;
+    //     padding-bottom: 25px;
+    // }
+    
+    
     #details {
-        display: flex;
-        justify-content: center;
+        display: grid;
+        column-count: 1;
         background-color: $bg-lightBlue;
         padding-top: 25px;
         padding-bottom: 25px;
     }
+
 
     #cardInside {
         margin-left: 15px;
@@ -118,13 +140,13 @@ $white-blue: #e1f5f3;
     .seltzerCard {
         max-width: 205px;
         background-color: white;
-
+        margin: auto;
         border-radius: 15px 50px;
     }
 
     .cardAvatar {
         background-image: url('../../assets/seltzerlylogo_1-8_100px.png');
-       background-size: cover;
+        background-size: cover;
     }
 
     #bubbleIcon {
@@ -133,16 +155,16 @@ $white-blue: #e1f5f3;
    
     
    
-    #bubRating {
-       display: flex;
-       justify-content: center;
-       background-color:white;
-       padding-top: 25px;
-       padding-bottom: 25px;
-       border-radius: 0;
+//     #bubRating {
+//        display: flex;
+//        justify-content: center;
+//        background-color:white;
+//        padding-top: 25px;
+//        padding-bottom: 25px;
+//        border-radius: 0;
        
    
-   }
+//    }
    
    #yourOwn {
        margin: auto;
@@ -165,8 +187,9 @@ $white-blue: #e1f5f3;
    }
    
    #appFizzyRating {
-       margin: auto;
-       max-width: 287px;
+        
+        margin: auto;
+        max-width: 287px;
    
    }
    
@@ -181,9 +204,17 @@ $white-blue: #e1f5f3;
         margin-top: 20px;
     }
 
+    // #details {
+    //     display: flex;
+    //     justify-content: center;
+    //     background-color: $bg-lightBlue;
+    //     padding-top: 25px;
+    //     padding-bottom: 25px;
+    // }
+
     #details {
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr;
         background-color: $bg-lightBlue;
         padding-top: 25px;
         padding-bottom: 25px;
@@ -198,6 +229,7 @@ $white-blue: #e1f5f3;
     
     .seltzerCard {
         max-width: 205px;
+        margin: auto;
         background-color: white;
         border-radius: 15px 50px;
     }
@@ -213,16 +245,16 @@ $white-blue: #e1f5f3;
    
     
    
-    #bubRating {
-       display: flex;
-       justify-content: center;
-       background-color:white;
-       padding-top: 25px;
-       padding-bottom: 25px;
-       border-radius: 0;
+//     #bubRating {
+//        display: flex;
+//        justify-content: center;
+//        background-color:white;
+//        padding-top: 25px;
+//        padding-bottom: 25px;
+//        border-radius: 0;
        
    
-   }
+//    }
    
    #yourOwn {
        margin: auto;
@@ -245,6 +277,7 @@ $white-blue: #e1f5f3;
    }
    
    #appFizzyRating {
+       
        margin: auto;
        max-width: 287px;
    
@@ -256,19 +289,35 @@ $white-blue: #e1f5f3;
 
  @media only screen and (min-width: 992px) {
 
-#backButton {
-    margin-left: 25%;
-    margin-top: 20px;
+
+// #details {
+//     display: flex;
+//     justify-content: center;
+//     background-color: $bg-lightBlue;
+//     padding-top: 25px;
+//     padding-bottom: 25px;
+// }
+
+#outer {
+    
+}
+
+#inner {
+    height: 100vh;
 }
 
 #details {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     background-color: $bg-lightBlue;
     padding-top: 25px;
     padding-bottom: 25px;
 }
 
+#backButton {
+    margin-left: 25%;
+    margin-top: 20px;
+}
 
 
 
@@ -283,7 +332,9 @@ $white-blue: #e1f5f3;
 
 
 .seltzerCard {
+    grid-column: 2;
     max-width: 205px;
+    margin: auto;
     background-color: white;
     border-radius: 15px 50px;
 }
@@ -299,18 +350,20 @@ $white-blue: #e1f5f3;
 
  
 
- #bubRating {
-    display: flex;
-    justify-content: center;
-    background-color:white;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    border-radius: 0;
+//  #bubRating {
+//     display: flex;
+//     justify-content: center;
+//     background-color:white;
+//     padding-top: 25px;
+//     padding-bottom: 25px;
+//     border-radius: 0;
     
 
-}
+// }
 
 #yourOwn {
+    grid-column: 1;
+    grid-row: 1;
     margin: auto;
     //border: 1px solid black;
     border-radius: 15px 50px;
@@ -331,6 +384,8 @@ p {
 }
 
 #appFizzyRating {
+    grid-column: 3;
+    grid-row: 1;
     margin: auto;
     max-width: 287px;
 
