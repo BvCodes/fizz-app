@@ -36,7 +36,7 @@ export class RatingService {
   }
   
 
-  // returns observale doc of a particular users rating for a particular seltzer
+  // returns observable doc of a particular users rating for a particular seltzer
 
   getUserRatingCollection(userId, fizzyId) {
     var userRef = this.firestore.collection('bubbles').doc(`${userId}_${fizzyId}`);
@@ -44,7 +44,6 @@ export class RatingService {
   }
 
 
-  // Returns
 
   getFizzyRating(fizzyId): Observable<Bubbles[]> {
     const fizzyRef = this.firestore.collection<Bubbles>('bubbles', ref => ref.where('fizzyId', '==', fizzyId).limit(10));
@@ -60,7 +59,7 @@ export class RatingService {
     
   }
 
-  // returns a collection of ratins for a particular seltzer
+  // returns a collection of ratings for a particular seltzer
 
   queryFizzRatings(fizzyId) {
     const bubbleRef = this.firestore.collection<Bubbles>('bubbles', ref => ref.where('fizzyId', '==', fizzyId));
@@ -124,34 +123,6 @@ export class RatingService {
         
       });
   }
-
-  //
-
-  setUserRating3(description: string, fizzyId: string, uid: string, value: number, displayName: string, brand: string, flavor, photoURL: string, numVotes: number) {
-    const rating = { description, fizzyId, uid, value, displayName, brand, flavor, photoURL, numVotes };
-    const ratingPath = `bubbles/${uid}_${fizzyId}`; 
-    this.firestore.doc(ratingPath).set(rating);
-  }
-
-
-  setUserRating2(description: string, fizzyId: string, uid: string, value: number, displayName: string, brand: string, flavor, photoURL: string, numVotes: number) {
-    const rating = { description, fizzyId, uid, value, displayName, brand, flavor, photoURL, numVotes };
-    const ratingPath = `bubbles/${uid}_${fizzyId}`;
-    this.firestore.doc(ratingPath).get().toPromise()
-      .then(docSnapShot => {
-        if (!docSnapShot.exists) {
-          this.firestore.doc(ratingPath).set(rating);
-          
-          
-          console.log("your review was submitted")
-          } 
-        else 
-        {
-          console.log("can only submit one rating per fizz, please edit in your user profile")
-        }
-      })
-  }
-
 
 
 
