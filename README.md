@@ -8,7 +8,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 =======
 ## Overview
+
 https://seltzerly.com
+
 FizzyApp (Seltzerly) is a single-page web app created with Angular 9 and Google Firebase using the angularFire API.
 The app allows users to browse, comment and rate various brand/flavors of seltzers. 
 >>>>>>> Stashed changes
