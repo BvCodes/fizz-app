@@ -15,14 +15,10 @@ import { map, tap } from 'rxjs/operators';
 export class FizzListComponent implements OnInit {
 
   fizzies: Fizzy[];
-  displayedColumns: String[] = ['Details', 'Brand', 'Flavor', 'Avg Rating']
-
-  bubImg: string;
 
   constructor( private fizzyService: FizzyService) { }
 
   ngOnInit(): void {
-    //this.fizzies = this.fizzyService.getFizzies();
     this.getFizzies();
     
 }
@@ -34,10 +30,6 @@ export class FizzListComponent implements OnInit {
    
   }
 
-  /* sortCollection(): Observable<Fizzy> {
-    return this.fizzies.pipe(tap(results => results.sort()))
-  };
-  */
 
   
 

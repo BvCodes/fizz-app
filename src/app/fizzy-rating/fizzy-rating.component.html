@@ -1,15 +1,9 @@
-<!--
-<div *ngFor="let rating of fizzyRating ">
---> 
+
 
 <div id="outer">
     <mat-list  *ngFor="let rating of fizzyRating">
         <mat-list-item id="list">
-            <!--
-            -{{ rating.displayName }}- <br>
-            {{ rating.fizzyName }} - {{ rating.value }} <br> {{ rating.description }}
-        </mat-list-item>
-            -->
+
             <mat-card id="rating-card">
                 <mat-card-header>
                 <div mat-card-avatar>
@@ -23,7 +17,7 @@
                 </mat-card-subtitle>
                 </mat-card-header>
                 <mat-card-content>
-                    {{ rating.value }}
+                    rating: {{ rating.value }} <img src="../../assets/icons-02_blue.png" id="bubbleIcon" height="20px" width="20px" alt="bubble icon">
                     <hr>
                     {{  rating. description }}
                 </mat-card-content>
@@ -43,6 +37,3 @@
 
 
 
-<!--
-</div>
--->

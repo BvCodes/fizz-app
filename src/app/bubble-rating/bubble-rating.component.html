@@ -1,44 +1,10 @@
 
 <div *ngIf="auth.user$ | async as user; else login">
-    <!--
-    <form [formGroup]="bubbleForm" (submit)="this.bubbleHandler(this.user.uid, this.user.displayName, this.bubbleForm.value.value, this.bubbleForm.value.description, this.user.photoURL)">
-    -->
+    
     <form [formGroup]="bubbleForm" (submit)="this.newRatingHandler3(this.user.uid, this.user.displayName, this.bubbleForm.value.value, this.bubbleForm.value.description, this.user.photoURL)"> 
-       <!--
+       
 
-        <hr>
-
-        
-        <div>
-            <h3>rating</h3><br>
-            <mat-slider thumbLabel  
-                        tickInterval="1" 
-                        min="1" 
-                        max="5"  
-                        formControlName="value"
-                        color="primary">Rating
-            </mat-slider>
-            <br>
-            
-        </div>
-
-        <mat-form-field>
-            <mat-label>Flavor Description/Comment</mat-label>
-            <textarea matInput placeholder="comment" formControlName="description" color="primary">
-            </textarea>
-        </mat-form-field>
-        <br>
-        
-
-
-
-        <div>
-        <button mat-raised-button color="primary" id="submitButton" class="submitValues" (click)="this.bubbleHandler(this.user.uid, this.user.displayName, this.bubbleForm.value.value, this.bubbleForm.value.description, this.user.photoURL)">Submit Rating</button>
-        <h3 id="ratingAlert"></h3>
-        </div>
-    -->
-
-    <mat-card id="ratingCard">
+        <mat-card id="ratingCard">
             <h3>Select Rating:</h3>
             <mat-slider thumbLabel  
                         tickInterval="1" 
@@ -47,25 +13,22 @@
                         formControlName="value"
                         color="accent">Rating
             </mat-slider>
-        
-        <br>
-        <mat-form-field appearance="fill" color="accent">
-                <mat-label>Comment</mat-label>
-                <textarea matInput placeholder="comment" formControlName="description">
-                </textarea>
-        </mat-form-field>
-        <br>
-        {{ confirmationMessage }}
-        
-        <mat-card-actions>
-            <button mat-raised-button color="accent" type="submit" id="submitButton" [disabled]="!bubbleForm.valid">Submit</button>
-            <h3 id="ratingAlert"></h3>
-        </mat-card-actions>
-    </mat-card>
+            <br>
+            <mat-form-field appearance="fill" color="accent">
+                    <mat-label>Comment</mat-label>
+                    <textarea matInput placeholder="comment" formControlName="description">
+                    </textarea>
+            </mat-form-field>
+            <br>
+                
+            <mat-card-actions>
+                <button mat-raised-button color="accent" type="submit" id="submitButton" [disabled]="!bubbleForm.valid">Submit</button>
+                <h3 id="ratingAlert"></h3>
+            </mat-card-actions>
+        </mat-card>
 
     </form>
 
-    
 </div>
 
 <ng-template #login>

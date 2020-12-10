@@ -12,12 +12,13 @@ $bg-lightBlue: #B3E5FC;
 
 h2 {
    width: 50%;
+   margin-left: 15px;
    text-align: center;
    margin-left: 2%;
    margin-top: 20px;
    font-size: 20px;
    background-color: $lite-blue;
-   border: 1px solid black;
+   
    border-radius: 15px 50px;
    box-shadow: 5px 5px  $primary-color;
 }
@@ -25,10 +26,9 @@ h2 {
 .fizzList {
     width: 98%;
     margin: auto;
-    height: 70px;
+    height: 45px;
     background-color: $bg-lightBlue;
     border-radius: 5px 5px;
-    //border: 1px solid black;
 }
 
 
@@ -36,14 +36,13 @@ h2 {
 #rating {
     text-align: center;
     width: 40%;
-    height: 70px;
+    height: 45px;
     margin-left: 0;
     display: flex;
     justify-content: center;
-    //line-height: 75px;
     background-color: #1de9b6;
     border-radius: 5px 5px;
-    border: 1px solid black;
+    
     font-size: 18px;
     
 
@@ -53,7 +52,7 @@ h2 {
 #detailButton {
     display: none;
     margin-left: 0;
-    border-radius: 15px 50px;
+    border-radius: 5px 5px;
     border: 1px solid black
 }
 
@@ -64,20 +63,13 @@ h2 {
 
 
 #brandFlavor {
-    height: 70px;
+    height: 45px;
     width: 60%;
-    //line-height: 75px;
     font-size: 20px;
     margin: auto;
-    //padding-left: 2em;
     text-align: center;
-    background-color: $white-blue;
+    background-color: white;
     border-radius: 5px 5px;
-    border: 1px solid black;
-    //margin-right: 1%;
-    //margin-left: 1%
-    
-    
     
 }
 
@@ -91,44 +83,27 @@ h2 {
     display: block;
     opacity: 0;
 }
-/*
-.canImg {
-    position: absolute;
-    display: block;
-}
 
-#brandFlavor:hover {
-    z-index: 1;
-    background-color: $lite-teal;
-}
-
-#brandFlavor:hover div{
-    opacity: 1;
-
-}
-*/
 
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 601px) {
 
     h2 {
         width: 40%;
+        margin-left: 15px;
         text-align: center;
         margin-top: 20px;
         font-size: 24px;
         background-color: $lite-blue;
-        border: 1px solid black;
+        
         border-radius: 15px 50px;
         box-shadow: 5px 5px  $primary-color;
      }
      
      .fizzList {
          width: 97%;
-         height: 60px;
-         background-color: $lite-blue;
-         border-radius: 15px 50px;
-         border: 1px solid black;
+         height: 48px;
      }
      
      
@@ -136,14 +111,14 @@ h2 {
      #rating {
          text-align: center;
          width: 35%;
-         height: 60px;
+         height: 48px;
          margin-left: 2%;
          display: flex;
          justify-content: center;
-         //line-height: 48px;
+         line-height: 48px;
          background-color: #1de9b6;
-         border-radius: 5px 30px 5px 5px;
-         border: 1px solid black;
+         border-radius: 5px 5px;
+         
          font-size: 15px;
          
      
@@ -152,7 +127,7 @@ h2 {
      
      #detailButton {
          margin-right: 5%;
-         border-radius: 15px 50px;
+         border-radius: 5px 5px;
          border: 1px solid black
      }
      
@@ -163,15 +138,15 @@ h2 {
      
      
      #brandFlavor {
-         height: 60px;
+         height: 48px;
          width: 60%;
-         line-height: 60px;
+         line-height: 48px;
          font-size: 18px;
          padding-left: 2em;
          text-align: left;
-         background-color: $white-blue;
-         border-radius: 15px 50px;
-         border: 1px solid black;
+         background-color: white;
+         border-radius: 5px 5px;
+         
          
          
      }
@@ -210,19 +185,17 @@ h2 {
         width: 40%;
         text-align: center;
         margin-top: 20px;
+        margin-left: 15px;
         font-size: 24px;
         background-color: $lite-blue;
-        border: 1px solid black;
+        
         border-radius: 15px 50px;
         box-shadow: 5px 5px  $primary-color;
      }
      
      .fizzList {
          width: 100%;
-         height: 60px;
-         background-color: $lite-blue;
-         border-radius: 15px 50px;
-         border: 1px solid black;
+         height: 48px;
      }
      
      
@@ -230,15 +203,15 @@ h2 {
      #rating {
          text-align: center;
          width: 40%;
-         height: 60px;
+         height: 48px;
          margin-left: 5%;
          display: flex;
          justify-content: center;
-         //line-height: 48px;
+         line-height: 48px;
          background-color: #1de9b6;
-         border-radius: 5px 30px 5px 5px;
-         border: 1px solid black;
-         font-size: 15px;
+         border-radius: 5px 5px;
+         
+         font-size: 18px;
          
      
          
@@ -246,7 +219,7 @@ h2 {
      
      #detailButton {
          margin-right: 5%;
-         border-radius: 15px 50px;
+         border-radius: 5px 5px;
          border: 1px solid black
      }
      
@@ -257,15 +230,15 @@ h2 {
      
      
      #brandFlavor {
-         height: 60px;
+         height: 48px;
          width: 50%;
-         line-height: 60px;
+         line-height: 48px;
          font-size: 18px;
          padding-left: 2em;
          text-align: left;
-         background-color: $white-blue;
-         border-radius: 15px 50px;
-         border: 1px solid black;
+         background-color: white;
+         border-radius: 5px 5px;
+         
          
          
      }
@@ -303,11 +276,12 @@ h2 {
 
     h2 {
         width: 20%;
+        margin-left: 15px;
         text-align: center;
         margin-top: 20px;
         font-size: 32px;
         background-color: $lite-blue;
-        border: 1px solid black;
+        
         border-radius: 15px 50px;
         box-shadow: 5px 5px  $primary-color;
      }
@@ -316,9 +290,7 @@ h2 {
         margin: auto;
          width: 95%;
          height: 48px;
-         background-color: $lite-blue;
-         border-radius: 15px 50px;
-         border: 1px solid black;
+
      }
      
      
@@ -326,13 +298,12 @@ h2 {
      #rating {
          width: 25%;
          height: 48px;
-         margin-left: 15%;
          display: flex;
          justify-content: center;
          line-height: 48px;
          background-color: #1de9b6;
-         border-radius: 50px 15px;
-         border: 1px solid black;
+         border-radius: 5px 5px;
+         
          font-size: 24px;
          
      
@@ -341,7 +312,7 @@ h2 {
      
      #detailButton {
          margin-right: 50px;
-         border-radius: 15px 50px;
+         border-radius: 5px 5px;
          border: 1px solid black
      }
      
@@ -358,9 +329,9 @@ h2 {
          font-size: 24px;
          padding-left: 2em;
          text-align: left;
-         background-color: $white-blue;
-         border-radius: 15px 50px;
-         border: 1px solid black;
+         background-color: white;
+         border-radius: 5px 5px;
+         
          
          
      }

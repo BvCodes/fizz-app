@@ -16,8 +16,6 @@ export class DashboardComponent implements OnInit {
   constructor(private fizzyService: FizzyService) { }
 
   ngOnInit(): void {
-    //this.topFizzies = this.fizzyService.orderedFizzy;
-    //this.getFizzies();
     this.getTop5();
   }
 

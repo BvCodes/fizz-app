@@ -59,7 +59,6 @@ export class EditRatingComponent implements OnInit {
 
     this.editRatingNumbers();
     this.ratingService.setUserRating(description, this.fizzyId, this.uid, value, this.displayName, this.brand, this.flavor, this.photoURL, this.resetVotes);
-    //document.getElementById("editRating").style.display = "none";
   }
 
   editRatingNumbers() {

@@ -15,6 +15,8 @@ export class FizzDetailComponent implements OnInit {
 
   fizzy: Fizzy;
 
+
+
   constructor(
     private route: ActivatedRoute,
     private fizzyService: FizzyService,
@@ -22,7 +24,10 @@ export class FizzDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    // this.isMobile();
+
     this.getFizzy();
+
   }
 
  getFizzy(): void {
@@ -36,6 +41,12 @@ export class FizzDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+
+  // isMobile() {
+  //   if (window.screen.width <= 767) {
+  //     this.mobile = true;
+  //   }
+  // }
 
   
 

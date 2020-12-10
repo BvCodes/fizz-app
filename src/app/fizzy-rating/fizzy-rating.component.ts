@@ -33,7 +33,6 @@ export class FizzyRatingComponent implements OnInit {
   upVote(uid, fizzyId, upVote, votes) {
     var upVoteCheck;
     this.ratingService.checkForUpVote2(uid, fizzyId).subscribe(res => upVoteCheck = res);
-    //console.log(upVoteCheck);
     if (upVoteCheck == undefined) {
     this.ratingService.setUpVote2(uid, fizzyId, upVote, votes);
     }

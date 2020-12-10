@@ -2,37 +2,8 @@
 <div *ngIf="auth.user$ | async as user">
     
     <form [formGroup]="editForm">
-        <hr>
-
-        <!--
-        <div>
-           <h3> Rating: </h3>
-            <mat-slider thumbLabel  
-                        tickInterval="1" 
-                        min="1" 
-                        max="5"  
-                        formControlName="value"
-                        color="primary">Rating
-            </mat-slider>
-            <br>
-            
-        </div>
-
-        <mat-form-field>
-            <mat-label>Your new Review</mat-label>
-            <textarea matInput placeholder="comment" formControlName="description" color="primary">
-            </textarea>
-        </mat-form-field>
-        <br>
         
-
-
-
-        <div>
-        <button mat-raised-button color="warn" id="submitButton" class="submitValues" (click)="this.editHandler(this.editForm.value.value, this.editForm.value.description)">Submit Edit</button>
-        <h3 id="ratingAlert"></h3>
-        </div>
-        -->
+        <hr>
 
         <mat-card id="ratingCard">
             <h3>Select Rating</h3>
